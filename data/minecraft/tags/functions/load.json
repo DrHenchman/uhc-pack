@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "uhc_pack:create_scoreboards",
+    "uhc_pack:create_teams"
+  ]
+}
