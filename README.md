@@ -16,6 +16,15 @@ TODO
 
 From here, you can control the rest of the setup the book provided
 
+## Planned Features
+
+* Pre-generation
+* Team joining (on|off)
+* Min markers (on|off)
+* Shrinking border controls (on|off)
+* Eternal day (on|off)
+* Glowing (on|off)
+
 ## Credits
 
 * DrHenchman - Creator of the datapack
