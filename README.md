@@ -4,7 +4,7 @@ A datapack for Minecraft 1.13+ for running Ultra Hardcore (UHC) tournaments
 
 ## Features
 
-TODO
+ODO
 
 ## How to install
 

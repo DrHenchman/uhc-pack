@@ -14,6 +14,9 @@ scoreboard objectives add uhcGlow dummy
 scoreboard objectives add uhcOpt trigger
 scoreboard objectives add uhcTeams dummy
 
+# Pre-generation scoreboards
+scoreboard objectives add uhcPG dummy Pre-generation
+
 # UHC scoreboards
 scoreboard objectives add uhcMin dummy
 scoreboard objectives add uhcHealth health Health

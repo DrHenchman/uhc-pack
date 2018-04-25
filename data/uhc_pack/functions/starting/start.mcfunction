@@ -9,7 +9,17 @@ execute if score UHC uhcBSize matches 3056 run worldborder set 3056
 gamemode survival @a[team=!spectate]
 gamemode spectator @a[team=spectate]
 
-execute at @r[tag=admin] run spreadplayers ~ ~ 224 750 true @a[team=!spectate]
+tag @a[team=!spectate] add playing
+
+execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 232 true @a[team=!spectate]
+execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 488 true @a[team=!spectate]
+execute if score UHC uhcBSize matches 1520 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 744 true @a[team=!spectate]
+execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1000 true @a[team=!spectate]
+execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1256 true @a[team=!spectate]
+execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1512 true @a[team=!spectate]
+
+execute at @e[type=minecraft:armor_stand,tag=lobby] run fill ~-12 250 ~-12 ~11 253 ~11 minecraft:air
+kill @e[type=minecraft:armor_stand,tag=lobby]
 
 gamerule spectatorsGenerateChunks false
 gamerule naturalRegeneration false
@@ -25,4 +35,4 @@ clear @a
 scoreboard players reset @a uhcDeaths
 scoreboard players set UHC uhcMin 0
 scoreboard players set UHC uhcTick 0
-scoreboard players set UHC uhcState 3
+scoreboard players set UHC uhcState 4
