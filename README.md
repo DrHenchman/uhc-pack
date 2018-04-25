@@ -1,4 +1,4 @@
-# UHC Pack v0.1 for Minecraft 1.13+
+# UHC Pack v0.2 for Minecraft 1.13+
 
 A datapack for Minecraft 1.13+ for running Ultra Hardcore (UHC) tournaments
 
