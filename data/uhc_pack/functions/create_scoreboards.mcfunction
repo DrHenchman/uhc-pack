@@ -20,4 +20,5 @@ scoreboard objectives add uhcPG dummy Pre-generation
 # UHC scoreboards
 scoreboard objectives add uhcMin dummy
 scoreboard objectives add uhcHealth health Health
+scoreboard objectives setdisplay list uhcHealth
 scoreboard objectives add uhcDeaths deathCount Deaths
