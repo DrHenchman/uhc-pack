@@ -7,14 +7,13 @@ There may be game breaking bugs in either.
 
 ## How to setup
 
-1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.1/uhc-pack.zip) of the datapack
+1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.2/uhc-pack.zip) of the datapack
 2. Place the zip file in in the `<world>/datapacks/` folder
 3. Run `/reload` on your server to detect the new datapack
 4. Decide the center of your map and teleport to it e.g. `/tp @s 0 ~ 0`
 5. Run `/function uhc_pack:setup` to prepare the Lobby
-6. Run `/function uhc_pack:lobby/reset_book` to get the control book
-7. Select world size you switch to use using the book
-8. If you wish to pregenerate chunks in the world, run `/function uhc:pack:pre_generation/start`
+6. Select world size you switch to use using the book
+7. If you wish to pregenerate chunks in the world, run `/function uhc:pack:pre_generation/start`
 
 From here, you can control the rest of the setup the book provided
 
