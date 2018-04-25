@@ -19,11 +19,16 @@ From here, you can control the rest of the setup the book provided
 
 ## Planned Features
 
+* Book triggers for glowing, eternal day and pre-generation controls
 * Team joining (on|off controls)
 * Min markers (on|off controls)
 * Shrinking border controls (on|off controls)
 * Eternal day (on|off controls)
 * Glowing (on|off controls)
+* UHC themed advancements:
+    * First kill
+    * First death
+    * Last to take damage
 
 ## Credits
 
