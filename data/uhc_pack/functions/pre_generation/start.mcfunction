@@ -23,7 +23,7 @@ execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=
 execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobby] run tp @s ~-248 253 ~-248
 execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobby] run tp @s ~-248 253 ~-248
 
-tellraw @a [{"text":"Pre-generation: ","color":"green"},{"text":"Starting!","color":"aqua"}]
+tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Pre-generation","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Started","color":"gold"}]
 
 scoreboard players set UHC uhcTick 0
 scoreboard players set UHC uhcState 2
