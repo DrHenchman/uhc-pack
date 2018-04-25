@@ -1,0 +1,11 @@
+{
+  "parent": "uhc_pack:root",
+  "criteria": {
+    "currently_lobby_state": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "uhc_pack:lobby/reset_book"
+  }
+}
