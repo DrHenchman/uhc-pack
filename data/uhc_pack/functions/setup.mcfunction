@@ -5,7 +5,7 @@ worldborder center ~ ~
 tellraw @a [{"text":"Setup: ","color":"green"},{"text":"Generating lobby (may take a few seconds)","color":"reset"}]
 fill ~-12 250 ~-12 ~11 253 ~11 minecraft:barrier hollow
 fill ~-11 253 ~-11 ~10 253 ~10 minecraft:air
-summon minecraft:armor_stand ~ 252 ~ {Tags:[lobby],NoGravity:1b}
+summon minecraft:armor_stand ~ 251 ~ {Tags:[lobby],NoGravity:1b,Small:1b,Invisible:1b,CustomNameVisible:1b,CustomName:"[{\"text\":\"UHC\",\"color\":\"gold\"},{\"text\":\" \\u2503 \",\"color\":\"reset\"},{\"text\":\"Lobby\",\"color\":\"aqua\"}]"}
 
 tellraw @a [{"text":"Setup: ","color":"green"},{"text":"Making ","color":"reset"},{"selector":"@s","color":"aqua"},{"text":" a ","color":"reset"},{"text":"UHC Admin","color":"gold"}]
 tag @s add admin
