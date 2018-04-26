@@ -1,4 +1,5 @@
-tag @a[tag=playing,scores={uhcDeaths=1..}] remove playing
+# Handle killed players
+execute as @a[tag=playing,scores={uhcDeaths=1..}] run function #uhc_pack:events/on_player_death
 gamemode spectator @a[gamemode=survival,tag=!playing]
 
 execute if score UHC uhcTick matches 1200 run scoreboard players add UHC uhcMin 1

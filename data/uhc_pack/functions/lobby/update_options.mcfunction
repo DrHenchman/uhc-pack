@@ -111,7 +111,7 @@ execute if score @s[tag=admin] uhcOpt matches 104..105 run tellraw @a [{"text":"
 
 execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry only ","color":"reset"},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action","color":"reset"}]
 execute if score @s[tag=!admin] uhcOpt matches ..16 at @s run playsound minecraft:block.note.chime player @s ~ ~ ~ 1 1
-execute if entity @s[tag=admin] at @s run playsound minecraft:block.note.chime player @s ~ ~ ~ 1 1
+execute if entity @s[tag=admin] unless score @s uhcOpt matches 30 at @s run playsound minecraft:block.note.chime player @s ~ ~ ~ 1 1
 
 function uhc_pack:lobby/reset_book
 

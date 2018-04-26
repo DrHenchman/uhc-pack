@@ -1,0 +1,6 @@
+{
+  "replace": false,
+  "values": [
+    "uhc_pack:running/mark_player_dead"
+  ]
+}
