@@ -1,4 +1,5 @@
 # Handle killed players
+team join spectate @a[gamemode=survival,tag=!playing,team=]
 execute as @a[tag=playing,scores={uhcDeaths=1..}] run function #uhc_pack:events/on_player_death
 gamemode spectator @a[gamemode=survival,tag=!playing]
 

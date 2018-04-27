@@ -1,0 +1,18 @@
+{
+  "parent": "uhc_pack:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:shield"
+    },
+    "title": "Tank",
+    "description": "Most damage taken"
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    },
+    "revealed": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

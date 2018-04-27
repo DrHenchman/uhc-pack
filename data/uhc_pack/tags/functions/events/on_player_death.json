@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "uhc_pack:running/mark_player_dead"
+    "uhc_pack:running/mark_player_dead",
+    "uhc_pack:awards/check_early_exit",
+    "uhc_pack:awards/check_first_blood"
   ]
 }

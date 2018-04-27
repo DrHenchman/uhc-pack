@@ -1,0 +1,24 @@
+{
+  "parent": "uhc_pack:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_sword"
+    },
+    "title": "MVP",
+    "description": "Most Valuable Player"
+  },
+  "criteria": {
+    "triggered_most_kills": {
+      "trigger": "minecraft:impossible"
+    },
+    "triggered_most_damage_dealt": {
+      "trigger": "minecraft:impossible"
+    },
+    "triggered_most_health": {
+      "trigger": "minecraft:impossible"
+    },
+    "revealed": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+execute unless entity @a[advancements={uhc_pack:awards/first_blood={triggered=true,kill_player=true}}] as @p[advancements={uhc_pack:awards/first_blood={kill_player=true}}] run advancement grant @s only uhc_pack:awards/first_blood triggered

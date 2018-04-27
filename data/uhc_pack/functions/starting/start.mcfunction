@@ -45,6 +45,9 @@ weather thunder 1
 
 # Reset all the relevant scoreboards and set state to running
 scoreboard players reset @a uhcDeaths
+scoreboard players reset @a uhcDDealt
+scoreboard players reset @a uhcDTaken
+scoreboard players reset @a uhcKills
 scoreboard players set UHC uhcMin 0
 scoreboard players set UHC uhcTick 0
 scoreboard players set UHC uhcState 4

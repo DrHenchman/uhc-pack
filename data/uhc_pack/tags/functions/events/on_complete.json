@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "uhc_pack:awards/calculate_heavy_hitter",
+    "uhc_pack:awards/calculate_mostly_harmless",
+    "uhc_pack:awards/calculate_mvp",
+    "uhc_pack:awards/calculate_tank"
+  ]
+}

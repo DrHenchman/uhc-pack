@@ -1,0 +1,18 @@
+{
+  "parent": "uhc_pack:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:feather"
+    },
+    "title": "Mostly Harmless",
+    "description": "Least damage dealt"
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    },
+    "revealed": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
