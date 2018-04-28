@@ -1,5 +1,10 @@
-# Clear the players inventory up front to avoid inventory lag
+# Clear the players inventory and effects
 clear @a
+effect clear @a
+# Help people not accidentally die in the first 5 seconds
+effect give @a minecraft:resistance 5 255 true
+# This is the magic amount of hunger to set all players saturation to 5.0f
+effect give @a minecraft:hunger 3 200 true
 
 # Set the world border
 execute if score UHC uhcBSize matches 496 run worldborder set 496
@@ -34,6 +39,7 @@ execute at @e[type=minecraft:armor_stand,tag=lobby] run fill ~-12 250 ~-12 ~11 2
 kill @e[type=minecraft:armor_stand,tag=lobby]
 
 # Set all the rules back to the correct settings for UHC play
+difficulty hard
 gamerule spectatorsGenerateChunks false
 gamerule naturalRegeneration false
 gamerule randomTickSpeed 3

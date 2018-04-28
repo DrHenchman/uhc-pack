@@ -109,9 +109,12 @@ execute if score UHC uhcGlow matches 101.. run scoreboard players set UHC uhcGlo
 execute if score UHC uhcGlow matches ..-1 run scoreboard players set UHC uhcGlow 100
 execute if score @s[tag=admin] uhcOpt matches 104..105 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Glowing start ","color":"aqua"},{"text":"set to ","color":"reset"},{"score":{"name":"UHC","objective":"uhcMM"},"color":"gold"},{"text":" minutes","color":"reset"}]
 
+
+# Handle sound effects and permission errors
 execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry only ","color":"reset"},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action","color":"reset"}]
 execute if score @s[tag=!admin] uhcOpt matches ..16 at @s run playsound minecraft:block.note.chime player @s ~ ~ ~ 1 1
 execute if entity @s[tag=admin] unless score @s uhcOpt matches 30 at @s run playsound minecraft:block.note.chime player @s ~ ~ ~ 1 1
 
-function uhc_pack:lobby/reset_book
+# Finally, reset the book for everyone so that the scores are updated
+execute as @a run function uhc_pack:lobby/reset_book
 

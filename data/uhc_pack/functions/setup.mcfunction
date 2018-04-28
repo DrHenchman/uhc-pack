@@ -13,7 +13,8 @@ tag @s add admin
 tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Setup","color":"gray"},{"text":" \u2503 Teleporting all players to the lobby","color":"reset"}]
 tp @a ~ 253 ~
 
-scoreboard players set UHC uhcState 1
+difficulty peaceful
+gamerule naturalRegeneration true
 gamerule randomTickSpeed 0
 gamerule doFireTick false
 gamerule doDaylightCycle false
@@ -22,4 +23,5 @@ weather clear 999999
 
 function uhc_pack:lobby/reset_options
 
+scoreboard players set UHC uhcState 1
 tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Setup","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Complete","color":"gold"}]
