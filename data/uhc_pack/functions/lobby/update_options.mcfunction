@@ -75,6 +75,9 @@ execute if score UHC uhcSBDur matches 101.. run scoreboard players set UHC uhcSB
 execute if score UHC uhcSBDur matches ..19 run scoreboard players set UHC uhcSBDur 100
 execute if score @s[tag=admin] uhcOpt matches 26..27 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Border shrink duration ","color":"aqua"},{"text":"set to ","color":"reset"},{"score":{"name":"UHC","objective":"uhcSBDur"},"color":"gold"},{"text":" minutes","color":"reset"}]
 
+# 28 - Pre-generate
+execute if score @s[tag=admin] uhcOpt matches 28 run function uhc_pack:pre_generation/start
+
 # 30 - Start
 execute if score @s[tag=admin] uhcOpt matches 30 run function uhc_pack:lobby/start
 
