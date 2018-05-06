@@ -79,7 +79,7 @@ execute if score @s[tag=admin] uhcOpt matches 26..27 run tellraw @a [{"text":"UH
 execute if score @s[tag=admin] uhcOpt matches 28 run function uhc_pack:pre_generation/start
 
 # 30 - Start
-execute if score @s[tag=admin] uhcOpt matches 30 run function uhc_pack:lobby/start
+execute if score @s[tag=admin] uhcOpt matches 30 run function uhc_pack:start
 
 ########
 # Page 2
