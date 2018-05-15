@@ -17,17 +17,17 @@ execute if score UHC uhcBSize matches 3056 run worldborder set 3056
 gamemode survival @a[team=!spectate]
 gamemode spectator @a[team=spectate]
 
-# Add the playing tag for all players who are participating in the UHC
+# Add the 'playing' tag for all players who are participating in the UHC
 # This is important for the death function
 tag @a[team=!spectate] add playing
 
 # Spread the players based off the world size
-execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 232 true @a[team=!spectate]
-execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 488 true @a[team=!spectate]
-execute if score UHC uhcBSize matches 1520 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 744 true @a[team=!spectate]
-execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1000 true @a[team=!spectate]
-execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1256 true @a[team=!spectate]
-execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1512 true @a[team=!spectate]
+execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 232 true @a[tag=playing]
+execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 488 true @a[tag=playing]
+execute if score UHC uhcBSize matches 1520 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 744 true @a[tag=playing]
+execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1000 true @a[tag=playing]
+execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1256 true @a[tag=playing]
+execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1512 true @a[tag=playing]
 
 # Ideally we would do this in the tick function like the other sounds,
 # however if we do the player won't hear it because they will be immediately
