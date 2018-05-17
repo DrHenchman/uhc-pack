@@ -5,7 +5,8 @@
       "item": "minecraft:wooden_sword"
     },
     "title": "First Blood",
-    "description": "First to kill another player"
+    "description": "First to kill another player",
+    "frame": "challenge"
   },
   "criteria": {
     "kill_player": {

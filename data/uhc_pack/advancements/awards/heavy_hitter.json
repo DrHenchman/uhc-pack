@@ -5,7 +5,8 @@
       "item": "minecraft:anvil"
     },
     "title": "Heavy Hitter",
-    "description": "Most damage dealt"
+    "description": "Most damage dealt",
+    "frame": "challenge"
   },
   "criteria": {
     "triggered": {

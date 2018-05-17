@@ -5,7 +5,8 @@
       "item": "minecraft:poisonous_potato"
     },
     "title": "Early Exit",
-    "description": "It's a stupid game anyway"
+    "description": "Someone has to go out first",
+    "frame": "challenge"
   },
   "criteria": {
     "triggered": {

@@ -22,6 +22,7 @@ From here, you can control the rest of the setup the book provided
 * Shrinking border controls (on|off controls)
 * Eternal day (on|off controls)
 * Glowing (on|off controls)
+* Vanilla advancements (on|off controls)
 * More UHC themed advancements:
     * Cavalry - Kill a player from horseback
     * Last to take damage

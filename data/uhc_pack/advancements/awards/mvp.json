@@ -5,7 +5,8 @@
       "item": "minecraft:diamond_sword"
     },
     "title": "MVP",
-    "description": "Most Valuable Player"
+    "description": "Most Valuable Player",
+    "frame": "challenge"
   },
   "criteria": {
     "triggered_most_kills": {

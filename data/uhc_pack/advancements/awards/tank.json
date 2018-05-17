@@ -5,7 +5,8 @@
       "item": "minecraft:shield"
     },
     "title": "Tank",
-    "description": "Most damage taken"
+    "description": "Most damage taken",
+    "frame": "challenge"
   },
   "criteria": {
     "triggered": {

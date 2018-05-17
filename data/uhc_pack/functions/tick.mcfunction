@@ -4,6 +4,7 @@
 # 2 - Pre-generation
 # 3 - Start sequence
 # 4 - UHC 
+# 5 - Awards
 
 execute if score UHC uhcState matches 1 run function uhc_pack:lobby/tick
 execute if score UHC uhcState matches 2 run function uhc_pack:pre_generation/tick
