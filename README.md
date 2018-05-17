@@ -1,4 +1,4 @@
-# UHC Pack v0.3 for Minecraft 1.13+
+# UHC Pack v0.4 for Minecraft 1.13+
 
 A datapack for Minecraft 1.13+ for running Ultra Hardcore (UHC) tournaments
 
@@ -7,13 +7,17 @@ There may be game breaking bugs in either.
 
 ## How to setup
 
-1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.3/uhc-pack.zip) of the datapack
+1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.4/uhc-pack.zip) of the datapack
 2. Place the zip file in in the `<world>/datapacks/` folder
 3. Run `/reload` on your server to detect the new datapack
 4. Decide the center of your map and teleport to it e.g. `/tp @s 0 ~ 0`
 5. Run `/function uhc_pack:setup` to prepare the Lobby
 
-From here, you can control the rest of the setup the book provided
+From here, you can control the rest of the setup the book provided.
+
+After the UHC is complete you can run `/function uhc_pack:complete` to put
+everyone into spectator mode and lock in the awards. You can then reveal
+the awards using `/function uhc_pack:awards/reveal`.
 
 ## Planned Features
 
