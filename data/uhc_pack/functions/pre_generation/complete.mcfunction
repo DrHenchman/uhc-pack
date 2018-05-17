@@ -2,7 +2,7 @@
 scoreboard objectives setdisplay sidebar
 scoreboard players reset * uhcPG
 
-tp @a[tag=pre_generator] @e[type=minecraft:armor_stand,tag=lobby,limit=1]
+tp @a[tag=pre_generator] @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1]
 tag @a[tag=pre_generator] remove pre_generator
 
 tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Pre-generation","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Complete","color":"gold"}]

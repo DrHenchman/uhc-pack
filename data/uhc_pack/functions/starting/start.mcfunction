@@ -22,12 +22,12 @@ gamemode spectator @a[team=spectate]
 tag @a[team=!spectate] add playing
 
 # Spread the players based off the world size
-execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 232 true @a[tag=playing]
-execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 488 true @a[tag=playing]
-execute if score UHC uhcBSize matches 1520 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 744 true @a[tag=playing]
-execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1000 true @a[tag=playing]
-execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1256 true @a[tag=playing]
-execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobby] run spreadplayers ~ ~ 224 1512 true @a[tag=playing]
+execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 232 true @a[tag=playing]
+execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 488 true @a[tag=playing]
+execute if score UHC uhcBSize matches 1520 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 744 true @a[tag=playing]
+execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1000 true @a[tag=playing]
+execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1256 true @a[tag=playing]
+execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1512 true @a[tag=playing]
 
 # Ideally we would do this in the tick function like the other sounds,
 # however if we do the player won't hear it because they will be immediately
@@ -35,8 +35,8 @@ execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=
 execute as @a at @s run playsound minecraft:block.note.flute player @s ~ ~ ~ 1 1
 
 # Clean up the lobby
-execute at @e[type=minecraft:armor_stand,tag=lobby] run fill ~-12 250 ~-12 ~11 253 ~11 minecraft:air
-kill @e[type=minecraft:armor_stand,tag=lobby]
+execute at @e[type=minecraft:armor_stand,tag=lobbycenter] run fill ~-12 250 ~-12 ~11 253 ~11 minecraft:air
+kill @e[tag=lobby]
 
 # Set all the rules back to the correct settings for UHC play
 difficulty hard
