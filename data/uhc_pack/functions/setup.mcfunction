@@ -1,5 +1,5 @@
 tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Setup","color":"gray"},{"text":" \u2503 Setting world spawn to current location","color":"reset"}]
-setworldspawn ~ ~ ~
+setworldspawn ~ 253 ~
 worldborder center ~ ~
 
 tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Setup","color":"gray"},{"text":" \u2503 Generating lobby (may take a few seconds)","color":"reset"}]

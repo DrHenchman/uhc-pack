@@ -3,7 +3,7 @@ execute if score UHC uhcTick matches 1 run title @a subtitle {"text":"Good luck!
 execute if score UHC uhcTick matches 1 run title @a title {"text":"UHC is starting!","color":"gold"}
 execute if score UHC uhcTick matches 1 as @a at @s run playsound minecraft:entity.wither.spawn player @s ~ ~ ~ 1
 
-execute if score UHC uhcTick matches 60 run title @a clear
+execute if score UHC uhcTick matches 60 run title @a reset
 execute if score UHC uhcTick matches 60 run title @a title {"text":"5","color":"gold"}
 execute if score UHC uhcTick matches 60 as @a at @s run playsound minecraft:block.note.flute player @s ~ ~ ~ 1 0.5
 
