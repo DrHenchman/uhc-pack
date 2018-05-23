@@ -15,7 +15,7 @@ execute if score UHC uhcBSize matches 2544 run worldborder set 2544
 execute if score UHC uhcBSize matches 3056 run worldborder set 3056
 
 gamemode survival @a[team=!spectate]
-gamemode spectator @a[team=spectate]
+execute as @a[team=spectate] run function uhc_pack:running/make_player_spectator
 
 # Add the 'playing' tag for all players who are participating in the UHC
 # This is important for the death function
