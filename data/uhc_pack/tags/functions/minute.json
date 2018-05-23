@@ -4,6 +4,6 @@
     "uhc_pack:running/minute_marker",
     "uhc_pack:running/border_shrinking/check",
     "uhc_pack:running/eternal_day",
-    "uhc_pack:running/glowing"
+    "uhc_pack:running/glowing/check"
   ]
 }

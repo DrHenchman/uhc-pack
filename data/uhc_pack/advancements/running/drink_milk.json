@@ -1,0 +1,16 @@
+{
+  "parent": "uhc_pack:root",
+  "criteria": {
+    "drink_milk": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "minecraft:milk_bucket"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhc_pack:running/glowing/on_consume_milk"
+  }
+}
