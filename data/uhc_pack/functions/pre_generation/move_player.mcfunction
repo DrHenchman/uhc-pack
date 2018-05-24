@@ -13,9 +13,9 @@ execute if score UHC uhcBSize matches 2544 if score X uhcPG >= UHC uhcBSize as @
 execute if score UHC uhcBSize matches 3056 if score X uhcPG >= UHC uhcBSize as @a[tag=pre_generator] at @s run tp @s ~-3056 253 ~16
 
 # Update coord scoreboards
-execute if score X uhcPG >= UHC uhcBSize run scoreboard players add Z uhcPG 16
-execute if score X uhcPG >= UHC uhcBSize run scoreboard players set X uhcPG -16
-scoreboard players add X uhcPG 16
+execute if entity @a[tag=pre_generator] if score X uhcPG >= UHC uhcBSize run scoreboard players add Z uhcPG 16
+execute if entity @a[tag=pre_generator] if score X uhcPG >= UHC uhcBSize run scoreboard players set X uhcPG -16
+execute if entity @a[tag=pre_generator] run scoreboard players add X uhcPG 16
 
 # Update progress scoreboard
-scoreboard players add Done uhcPG 1
+execute if entity @a[tag=pre_generator] run scoreboard players add Done uhcPG 1
