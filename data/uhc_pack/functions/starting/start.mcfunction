@@ -7,12 +7,12 @@ effect give @a minecraft:resistance 5 255 true
 effect give @a minecraft:hunger 3 200 true
 
 # Set the world border
-execute if score UHC uhcBSize matches 496 run worldborder set 496
-execute if score UHC uhcBSize matches 1008 run worldborder set 1008
-execute if score UHC uhcBSize matches 1520 run worldborder set 1520
-execute if score UHC uhcBSize matches 2032 run worldborder set 2032
-execute if score UHC uhcBSize matches 2544 run worldborder set 2544
-execute if score UHC uhcBSize matches 3056 run worldborder set 3056
+execute if score BorderSize uhcOption matches 496 run worldborder set 496
+execute if score BorderSize uhcOption matches 1008 run worldborder set 1008
+execute if score BorderSize uhcOption matches 1520 run worldborder set 1520
+execute if score BorderSize uhcOption matches 2032 run worldborder set 2032
+execute if score BorderSize uhcOption matches 2544 run worldborder set 2544
+execute if score BorderSize uhcOption matches 3056 run worldborder set 3056
 
 gamemode survival @a[team=!spectate]
 execute as @a[team=spectate] run function uhc_pack:running/make_player_spectator
@@ -22,12 +22,12 @@ execute as @a[team=spectate] run function uhc_pack:running/make_player_spectator
 tag @a[team=!spectate] add playing
 
 # Spread the players based off the world size
-execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 232 true @a[tag=playing]
-execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 488 true @a[tag=playing]
-execute if score UHC uhcBSize matches 1520 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 744 true @a[tag=playing]
-execute if score UHC uhcBSize matches 2032 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1000 true @a[tag=playing]
-execute if score UHC uhcBSize matches 2544 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1256 true @a[tag=playing]
-execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1512 true @a[tag=playing]
+execute if score BorderSize uhcOption matches 496 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 232 true @a[tag=playing]
+execute if score BorderSize uhcOption matches 1008 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 488 true @a[tag=playing]
+execute if score BorderSize uhcOption matches 1520 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 744 true @a[tag=playing]
+execute if score BorderSize uhcOption matches 2032 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1000 true @a[tag=playing]
+execute if score BorderSize uhcOption matches 2544 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1256 true @a[tag=playing]
+execute if score BorderSize uhcOption matches 3056 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 1512 true @a[tag=playing]
 
 # Ideally we would do this in the tick function like the other sounds,
 # however if we do the player won't hear it because they will be immediately
@@ -54,6 +54,6 @@ scoreboard players reset @a uhcDeaths
 scoreboard players reset @a uhcDDealt
 scoreboard players reset @a uhcDTaken
 scoreboard players reset @a uhcKills
-scoreboard players set UHC uhcMin 0
-scoreboard players set UHC uhcTick 0
+scoreboard players set Minute uhcTime 0
+scoreboard players set Tick uhcTime 0
 scoreboard players set UHC uhcState 4

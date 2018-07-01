@@ -11,4 +11,4 @@ execute if score UHC uhcState matches 2 run function uhc_pack:pre_generation/tic
 execute if score UHC uhcState matches 3 run function uhc_pack:starting/tick
 execute if score UHC uhcState matches 4 run function uhc_pack:running/tick
 
-scoreboard players add UHC uhcTick 1
+scoreboard players add Tick uhcTime 1

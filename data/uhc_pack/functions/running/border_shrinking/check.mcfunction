@@ -1,1 +1,1 @@
-execute if score UHC uhcMin = UHC uhcSBStrt run function uhc_pack:running/border_shrinking/activate
+execute if score Minute uhcTime = SBStart uhcOption run function uhc_pack:running/border_shrinking/activate
