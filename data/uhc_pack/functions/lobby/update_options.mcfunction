@@ -110,7 +110,7 @@ execute if score @s[tag=admin] uhcOpt matches 104 run scoreboard players remove 
 execute if score @s[tag=admin] uhcOpt matches 105 run scoreboard players add UHC uhcGlow 10
 execute if score UHC uhcGlow matches 101.. run scoreboard players set UHC uhcGlow 0
 execute if score UHC uhcGlow matches ..-1 run scoreboard players set UHC uhcGlow 100
-execute if score @s[tag=admin] uhcOpt matches 104..105 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Glowing start ","color":"aqua"},{"text":"set to ","color":"reset"},{"score":{"name":"UHC","objective":"uhcMM"},"color":"gold"},{"text":" minutes","color":"reset"}]
+execute if score @s[tag=admin] uhcOpt matches 104..105 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Glowing start ","color":"aqua"},{"text":"set to ","color":"reset"},{"score":{"name":"UHC","objective":"uhcGlow"},"color":"gold"},{"text":" minutes","color":"reset"}]
 
 
 # Handle sound effects and permission errors
