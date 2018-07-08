@@ -32,7 +32,7 @@ execute if score UHC uhcBSize matches 3056 at @e[type=minecraft:armor_stand,tag=
 # Ideally we would do this in the tick function like the other sounds,
 # however if we do the player won't hear it because they will be immediately
 # teleported away
-execute as @a at @s run playsound minecraft:block.note.flute player @s ~ ~ ~ 1 1
+execute as @a at @s run playsound minecraft:block.note_block.flute player @s ~ ~ ~ 1 1
 
 # Clean up the lobby
 execute at @e[type=minecraft:armor_stand,tag=lobbycenter] run fill ~-12 250 ~-12 ~11 253 ~11 minecraft:air
