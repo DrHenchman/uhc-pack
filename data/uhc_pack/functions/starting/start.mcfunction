@@ -43,8 +43,7 @@ difficulty hard
 gamerule spectatorsGenerateChunks false
 gamerule naturalRegeneration false
 gamerule randomTickSpeed 3
-# For now, don't re-enable fire tick due to MC-122428
-#gamerule doFireTick true
+gamerule doFireTick true
 gamerule doDaylightCycle true
 time set 0
 weather thunder 1
@@ -57,3 +56,4 @@ scoreboard players reset @a uhcKills
 scoreboard players set UHC uhcMin 0
 scoreboard players set UHC uhcTick 0
 scoreboard players set UHC uhcState 4
+function #uhc_pack:events/on_start

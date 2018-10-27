@@ -24,7 +24,6 @@ gamerule doDaylightCycle false
 time set noon
 weather clear 999999
 
-function uhc_pack:lobby/reset_options
-
 scoreboard players set UHC uhcState 1
+function #uhc_pack:events/on_lobby
 tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Setup","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Complete","color":"gold"}]
