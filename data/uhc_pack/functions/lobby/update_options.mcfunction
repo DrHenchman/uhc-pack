@@ -12,7 +12,7 @@ execute if score @s uhcOpt matches 2 run team join spectate
 execute if score @s uhcOpt matches 3 run team join redstone
 execute if score @s uhcOpt matches 4 run team join gold
 execute if score @s uhcOpt matches 5 run team join slime
-execute if score @s uhcOpt matches 6 run team join orchid
+execute if score @s uhcOpt matches 6 run team join diamond
 execute if score @s uhcOpt matches 7 run team join water
 execute if score @s uhcOpt matches 8 run team join purpur
 execute if score @s uhcOpt matches 9 run team join stone
