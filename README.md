@@ -19,10 +19,6 @@ the awards using `/function uhc_pack:awards/reveal`.
 ## Planned Features
 
 * Team joining (on|off controls)
-* Min markers (on|off controls)
-* Shrinking border controls (on|off controls)
-* Eternal day (on|off controls)
-* Glowing (on|off controls)
 * Vanilla advancements (on|off controls)
 * More UHC themed advancements:
     * Cavalry - Kill a player from horseback

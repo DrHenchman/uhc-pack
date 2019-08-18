@@ -9,6 +9,7 @@ scoreboard objectives add uhcSBDur dummy
 scoreboard objectives add uhcSBSize dummy
 scoreboard objectives add uhcEter dummy
 scoreboard objectives add uhcGlow dummy
+scoreboard objectives add uhcEnabled dummy
 
 # Lobby scoreboards
 scoreboard objectives add uhcOpt trigger
