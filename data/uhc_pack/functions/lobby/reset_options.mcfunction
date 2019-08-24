@@ -14,11 +14,11 @@ scoreboard players set UHCEter uhcEnabled 1
 scoreboard players set UHCGlow uhcEnabled 1
 
 # Display options for toggles
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcSBStrt 1
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcMM 1
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcEter 1
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcGlow 1
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcSBStrt 0
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcMM 0
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcEter 0
-scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcGlow 0
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcSBStrt 1
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcMM 1
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcEter 1
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcGlow 1
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcSBStrt 0
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcMM 0
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcEter 0
+#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcGlow 0
