@@ -18,11 +18,18 @@ the awards using `/function uhc_pack:awards/reveal`.
 
 ## Planned Features
 
+* (Semi-?)automatically complete when only a single team is left
 * Team joining (on|off controls)
 * Vanilla advancements (on|off controls)
+* Suspicious stew (on|off controls)
+* Level II potions (on|off controls)
 * More UHC themed advancements:
     * Cavalry - Kill a player from horseback
+    * Win without taking any damage
     * Last to take damage
+    * First to find diamonds
+    * First to enter the nether
+    * First to find a fortress
 
 ## Credits
 
