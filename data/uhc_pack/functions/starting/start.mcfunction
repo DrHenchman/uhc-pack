@@ -40,7 +40,8 @@ kill @e[tag=lobby]
 
 # Set all the rules back to the correct settings for UHC play
 difficulty hard
-gamerule spectatorsGenerateChunks false
+# spectatorsGenerateChunks=false is current broken in Minecraft, making chunks not render
+gamerule spectatorsGenerateChunks true
 gamerule naturalRegeneration false
 gamerule randomTickSpeed 3
 gamerule doFireTick true
