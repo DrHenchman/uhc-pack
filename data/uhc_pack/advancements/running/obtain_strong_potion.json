@@ -1,0 +1,119 @@
+{
+  "criteria": {
+    "strong_harming": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_harming"
+          }
+        ]
+      }
+    },
+    "strong_healing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_healing"
+          }
+        ]
+      }
+    },
+    "strong_leaping": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_leaping"
+          }
+        ]
+      }
+    },
+    "strong_poison": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_poison"
+          }
+        ]
+      }
+    },
+    "strong_regeneration": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_regeneration"
+          }
+        ]
+      }
+    },
+    "strong_slowness": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_slowness"
+          }
+        ]
+      }
+    },
+    "strong_strength": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_strength"
+          }
+        ]
+      }
+    },
+    "strong_swiftness": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_swiftness"
+          }
+        ]
+      }
+    },
+    "strong_turtle_master": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "uhc_pack:potions",
+            "potion": "minecraft:strong_turtle_master"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "strong_harming",
+      "strong_healing",
+      "strong_leaping",
+      "strong_poison",
+      "strong_regeneration",
+      "strong_slowness",
+      "strong_strength",
+      "strong_swiftness",
+      "strong_turtle_master"
+    ]
+  ],
+  "rewards": {
+    "function": "uhc_pack:running/strong_potions/on_obtain"
+  }
+}

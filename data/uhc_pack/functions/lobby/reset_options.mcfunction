@@ -12,6 +12,9 @@ scoreboard players set UHCShrink uhcEnabled 1
 scoreboard players set UHCMM uhcEnabled 1
 scoreboard players set UHCEter uhcEnabled 1
 scoreboard players set UHCGlow uhcEnabled 1
+scoreboard players set UHCPotion uhcEnabled 1
+scoreboard players set UHCStew uhcEnabled 1
+scoreboard players set UHCPassive uhcEnabled 1
 
 # Display options for toggles
 #scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcSBStrt 1

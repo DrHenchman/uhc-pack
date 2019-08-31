@@ -18,7 +18,7 @@ function main() {
         raise_error "No destination specified"
     fi
     if [ -d "$destination" ]; then
-        destination="$(dirname $destination)/$(basename $destination)/uhc-pack.zip"
+        destination="$(dirname "$destination")/$(basename "$destination")/uhc-pack.zip"
     fi
     if [ "${destination##*.}" != "zip" ]; then
         raise_error "$destination is not a zip"
@@ -33,6 +33,7 @@ function main() {
     fi
     generate_book
     zip -r "$destination" *
+    echo "Generated: $destination"
 }
 
 function raise_error() {
