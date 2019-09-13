@@ -32,7 +32,7 @@ function main() {
         fi
     fi
     generate_book
-    #zip -r "$destination" *
+    zip -r "$destination" *
 }
 
 function raise_error() {
