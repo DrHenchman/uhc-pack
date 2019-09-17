@@ -16,20 +16,16 @@ After the UHC is complete you can run `/function uhc_pack:complete` to put
 everyone into spectator mode and lock in the awards. You can then reveal
 the awards using `/function uhc_pack:awards/reveal`.
 
-## Planned Features
+## Features
 
-* (Semi-?)automatically complete when only a single team is left
-* Team joining (on|off controls)
-* Vanilla advancements (on|off controls)
-* Suspicious stew (on|off controls)
-* Level II potions (on|off controls)
-* More UHC themed advancements:
-    * Cavalry - Kill a player from horseback
-    * Win without taking any damage
-    * Last to take damage
-    * First to find diamonds
-    * First to enter the nether
-    * First to find a fortress
+* *Team selection* - Allow players to select their own teams as well as allow for them to be randomized between a specified number of teams.
+  Players can also choose to spectate only. Players who join after the game has started automatically spectate.
+* *World configuration* - Pick from a number of world sizes, from 500-3K blocks wide. Chunks can also be pre-generated to avoid lag during gameplay.
+  To encourage combat, you can also configure a shrinking border with control over when it starts shrinking, the duration it shrinks for and the
+  eventual border size.
+* *Minute markers* - To help keep track of time, minute markers can be configured.
+* *Late game options* - Encourage teams to engage in PVP by triggering external day and glowing effects.
+* *Buffs and Nerfs* - Control the balance of your UHC using toggles for whether strong potions or suspicious stews are allowed.
 
 ## Credits
 
