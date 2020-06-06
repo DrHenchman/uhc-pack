@@ -14,7 +14,7 @@ execute unless entity @a[team=!spectate,advancements={uhc_pack:awards/mvp={trigg
 # Finally, we check who dealt the most damage of those remaining
 scoreboard players set UHC uhcPG 0
 execute as @a[team=!spectate,advancements={uhc_pack:awards/mvp={triggered_most_kills=true,triggered_most_health=true}}] run scoreboard players operation UHC uhcPG > @s uhcDealt
-execute as @a[team=!spectate,advancements={uhc_pack:awards/mvp={triggered_most_kills=true,triggered_most_health=true}}] if score @s uhcKills = UHC uhcPG run advancement grant @s only uhc_pack:awards/mvp triggered_most_damage_dealt
+execute as @a[team=!spectate,advancements={uhc_pack:awards/mvp={triggered_most_kills=true,triggered_most_health=true}}] if score @s uhcDealt = UHC uhcPG run advancement grant @s only uhc_pack:awards/mvp triggered_most_damage_dealt
 execute unless entity @a[team=!spectate,advancements={uhc_pack:awards/mvp={triggered_most_kills=true,triggered_most_health=true,triggered_most_damage_dealt=true}}] as @a[team=!spectate,advancements={uhc_pack:awards/mvp={triggered_most_kills=true,triggered_most_health=true}}] run advancement grant @s only uhc_pack:awards/mvp triggered_most_damage_dealt
 
 scoreboard players reset UHC uhcPG
