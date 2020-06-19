@@ -80,8 +80,8 @@ execute if score @s[tag=admin] uhcOpt matches 28 run function uhc_pack:pre_gener
 
 # 29 - Toggle Shrinking
 execute if score @s[tag=admin] uhcOpt matches 29 run execute store success score UHCShrink uhcEnabled run execute if score UHCShrink uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcSBStrt run execute if score UHCShrink uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcSBStrt run execute if score UHCShrink uhcEnabled matches 0
+execute if score UHCShrink uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Shrink set from storage uhc_pack:text Icon.Enabled
+execute if score UHCShrink uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Shrink set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 29 if score UHCShrink uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Border shrink","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 29 if score UHCShrink uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Border shrink","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
@@ -121,48 +121,50 @@ execute if score @s[tag=admin] uhcOpt matches 104..105 run tellraw @a [{"text":"
 
 # 106 - Toggle Eternal day
 execute if score @s[tag=admin] uhcOpt matches 106 run execute store success score UHCEter uhcEnabled run execute if score UHCEter uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcEter run execute if score UHCEter uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcEter run execute if score UHCEter uhcEnabled matches 0
+execute if score UHCEter uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Eternal set from storage uhc_pack:text Icon.Enabled
+execute if score UHCEter uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Eternal set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 106 if score UHCEter uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Eternal day","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 106 if score UHCEter uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Eternal day","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
 # 107 - Toggle Glowing
 execute if score @s[tag=admin] uhcOpt matches 107 run execute store success score UHCGlow uhcEnabled run execute if score UHCGlow uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcGlow run execute if score UHCGlow uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcGlow run execute if score UHCGlow uhcEnabled matches 0
+execute if score UHCGlow uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Glow set from storage uhc_pack:text Icon.Enabled
+execute if score UHCGlow uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Glow set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 107 if score UHCGlow uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Glowing","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 107 if score UHCGlow uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Glowing","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
 # 108 - Toggle Markers
 execute if score @s[tag=admin] uhcOpt matches 108 run execute store success score UHCMM uhcEnabled run execute if score UHCMM uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcMM run execute if score UHCMM uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcMM run execute if score UHCMM uhcEnabled matches 0
+execute if score UHCMM uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Marker set from storage uhc_pack:text Icon.Enabled
+execute if score UHCMM uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Marker set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 108 if score UHCMM uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Minute marker","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 108 if score UHCMM uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Minute marker","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
 # 109 - Toggle Strong Potions
 execute if score @s[tag=admin] uhcOpt matches 109 run execute store success score UHCPotion uhcEnabled run execute if score UHCPotion uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcPotion run execute if score UHCPotion uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcPotion run execute if score UHCPotion uhcEnabled matches 0
+execute if score UHCPotion uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Potion set from storage uhc_pack:text Icon.Enabled
+execute if score UHCPotion uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Potion set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 109 if score UHCPotion uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Strong potions","color":"aqua"},{"text":" are ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 109 if score UHCPotion uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Strong potions","color":"aqua"},{"text":" are ","color":"reset"},{"text":"Disabled","color":"red"}]
 
 # 110 - Toggle Suspicious Stew
 execute if score @s[tag=admin] uhcOpt matches 110 run execute store success score UHCStew uhcEnabled run execute if score UHCStew uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhc run execute if score UHCPotion uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhc run execute if score UHCPotion uhcEnabled matches 0
+execute if score UHCStew uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Stew set from storage uhc_pack:text Icon.Enabled
+execute if score UHCStew uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Stew set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 110 if score UHCStew uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Suspicious stew","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 110 if score UHCStew uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Supicious stew","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
 # 111 - Toggle Passive Mobs
 execute if score @s[tag=admin] uhcOpt matches 111 run execute store success score UHCPassive uhcEnabled run execute if score UHCPassive uhcEnabled matches 0
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcMM run execute if score UHCPassive uhcEnabled matches 1
-#execute store success score @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcMM run execute if score UHCPassive uhcEnabled matches 0
+execute if score UHCPassive uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Passive set from storage uhc_pack:text Icon.Enabled
+execute if score UHCPassive uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Passive set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 111 if score UHCPassive uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Passive mob AI","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 111 if score UHCPassive uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Passive mob AI","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
 # 112 - Toggle Phantoms
 execute if score @s[tag=admin] uhcOpt matches 112 run execute store success score UHCPhantom uhcEnabled run execute if score UHCPhantom uhcEnabled matches 0
+execute if score UHCPhantom uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Phantom set from storage uhc_pack:text Icon.Enabled
+execute if score UHCPhantom uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Phantom set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 112 if score UHCPhantom uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Phantom spawning","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 112 if score UHCPhantom uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Phantom spawning","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 

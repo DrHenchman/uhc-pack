@@ -43,7 +43,7 @@
     {"text":" \u2503 ","color":"reset"},
     {"text":"Gen","color":"gold","hoverEvent":{"action":"show_text","value":"Pre-generate the chunks\nwithin the world border\n\nThis may take several minutes!"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 28"}},
     {"text":"\n\n     Shrink Options ","color":"dark_gray"},
-    {"text":"\u25cf","hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 29"}},
+    {"storage":"uhc_pack:text","nbt":"Icon.Shrink","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 29"}},
     {"text":"\nStart","color":"dark_gray"},
     {"text":" \u2503 ","color":"reset"},
     {"text":"-","color":"red","hoverEvent":{"action":"show_text","value":"- 20 minutes"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 22"}},

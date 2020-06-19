@@ -18,11 +18,12 @@ scoreboard players set UHCPassive uhcEnabled 1
 scoreboard players set UHCPhantom uhcEnabled 1
 
 # Display options for toggles
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcSBStrt 1
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcMM 1
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcEter 1
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_enabled,limit=1] uhcGlow 1
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcSBStrt 0
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcMM 0
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcEter 0
-#scoreboard players set @e[type=minecraft:armor_stand,tag=lobby,tag=toggle,tag=toggle_disabled,limit=1] uhcGlow 0
+
+data modify storage uhc_pack:text Icon.Shrink set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Marker set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Eternal set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Glow set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Potion set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Stew set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Passive set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.Phantom set from storage uhc_pack:text Icon.Enabled
