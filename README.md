@@ -1,4 +1,4 @@
-# UHC Pack v0.14 for Minecraft 1.15+
+# UHC Pack v0.15 for Minecraft 1.15+
 
 A datapack for Minecraft 1.15+ for running Ultra Hardcore (UHC) tournaments.
 
