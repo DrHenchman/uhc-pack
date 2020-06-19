@@ -30,5 +30,7 @@
     {"text":"\nSuspicious stew ","color":"dark_gray"},
     {"text":"\u25cf","hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 110"}},
     {"text":"\nPassive mob AI ","color":"dark_gray"},
-    {"text":"\u25cf","hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 111"}}
+    {"text":"\u25cf","hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 111"}},
+    {"text":"\nPhantom spawning ","color":"dark_gray"},
+    {"text":"\u25cf","hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 112"}}
 ]

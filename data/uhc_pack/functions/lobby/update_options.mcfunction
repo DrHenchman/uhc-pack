@@ -161,6 +161,11 @@ execute if score @s[tag=admin] uhcOpt matches 111 run execute store success scor
 execute if score @s[tag=admin] uhcOpt matches 111 if score UHCPassive uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Passive mob AI","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 111 if score UHCPassive uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Passive mob AI","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
+# 112 - Toggle Phantoms
+execute if score @s[tag=admin] uhcOpt matches 112 run execute store success score UHCPhantom uhcEnabled run execute if score UHCPhantom uhcEnabled matches 0
+execute if score @s[tag=admin] uhcOpt matches 112 if score UHCPhantom uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Phantom spawning","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
+execute if score @s[tag=admin] uhcOpt matches 112 if score UHCPhantom uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Phantom spawning","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
+
 # Handle sound effects and permission errors
 execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry only ","color":"reset"},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action","color":"reset"}]
 execute if score @s[tag=!admin] uhcOpt matches ..16 at @s run playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1

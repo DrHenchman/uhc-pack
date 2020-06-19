@@ -49,6 +49,10 @@ gamerule doDaylightCycle true
 time set 0
 weather thunder 1
 
+# Set all customizable options
+execute if score UHCPhantom uhcEnabled matches 1 run gamerule doInsomnia true
+execute if score UHCPhantom uhcEnabled matches 0 run gamerule doInsomnia false
+
 # Reset all the relevant scoreboards and set state to running
 scoreboard players reset @a uhcDeaths
 scoreboard players reset @a uhcDDealt
