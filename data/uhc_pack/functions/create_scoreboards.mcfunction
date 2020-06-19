@@ -24,6 +24,7 @@ scoreboard objectives add uhcMin dummy
 scoreboard objectives add uhcHealth health "Health"
 scoreboard objectives setdisplay list uhcHealth
 scoreboard objectives add uhcDeaths deathCount "Deaths"
+scoreboard objectives add uhcATime minecraft.custom:minecraft.time_since_death "Alive time"
 scoreboard objectives add uhcDDealt minecraft.custom:minecraft.damage_dealt "Damage Dealt"
 scoreboard objectives add uhcDTaken minecraft.custom:minecraft.damage_taken "Damage Taken"
 scoreboard objectives add uhcKills minecraft.custom:minecraft.player_kills "Kills"
