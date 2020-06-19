@@ -1,6 +1,6 @@
-# UHC Pack v0.10 for Minecraft 1.14+
+# UHC Pack v0.14 for Minecraft 1.15+
 
-A datapack for Minecraft 1.14+ for running Ultra Hardcore (UHC) tournaments.
+A datapack for Minecraft 1.15+ for running Ultra Hardcore (UHC) tournaments.
 
 ## How to setup
 
@@ -33,8 +33,8 @@ the awards using `/function uhc_pack:awards/reveal`.
 
 ## License
 
-UHC Pack - Ultra Hardcore for Minecraft 1.14+
-Copyright (C) 2019  DrHenchman
+UHC Pack - Ultra Hardcore for Minecraft 1.15+
+Copyright (C) 2020  DrHenchman
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
