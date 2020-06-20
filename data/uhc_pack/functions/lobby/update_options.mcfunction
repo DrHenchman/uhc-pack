@@ -9,21 +9,22 @@
 # 3..16 - Teams
 execute if score @s uhcOpt matches 1 run team leave @s
 execute if score @s uhcOpt matches 2 run team join spectate
-execute if score @s uhcOpt matches 3 run team join redstone
-execute if score @s uhcOpt matches 4 run team join gold
-execute if score @s uhcOpt matches 5 run team join slime
-execute if score @s uhcOpt matches 6 run team join diamond
-execute if score @s uhcOpt matches 7 run team join water
-execute if score @s uhcOpt matches 8 run team join purpur
-execute if score @s uhcOpt matches 9 run team join stone
-execute if score @s uhcOpt matches 10 run team join netherwart
-execute if score @s uhcOpt matches 11 run team join acacia
-execute if score @s uhcOpt matches 12 run team join grass
-execute if score @s uhcOpt matches 13 run team join prismarine
-execute if score @s uhcOpt matches 14 run team join lapis
-execute if score @s uhcOpt matches 15 run team join chorus
-execute if score @s uhcOpt matches 16 run team join bedrock
-execute if score @s uhcOpt matches 1..16 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"selector":"@s","color":"aqua"},{"text":" changed team manually","color":"reset"}]
+execute if score @s uhcOpt matches 3 if score UHCJoining uhcEnabled matches 1 run team join redstone
+execute if score @s uhcOpt matches 4 if score UHCJoining uhcEnabled matches 1 run team join gold
+execute if score @s uhcOpt matches 5 if score UHCJoining uhcEnabled matches 1 run team join slime
+execute if score @s uhcOpt matches 6 if score UHCJoining uhcEnabled matches 1 run team join diamond
+execute if score @s uhcOpt matches 7 if score UHCJoining uhcEnabled matches 1 run team join water
+execute if score @s uhcOpt matches 8 if score UHCJoining uhcEnabled matches 1 run team join purpur
+execute if score @s uhcOpt matches 9 if score UHCJoining uhcEnabled matches 1 run team join stone
+execute if score @s uhcOpt matches 10 if score UHCJoining uhcEnabled matches 1 run team join netherwart
+execute if score @s uhcOpt matches 11 if score UHCJoining uhcEnabled matches 1 run team join acacia
+execute if score @s uhcOpt matches 12 if score UHCJoining uhcEnabled matches 1 run team join grass
+execute if score @s uhcOpt matches 13 if score UHCJoining uhcEnabled matches 1 run team join prismarine
+execute if score @s uhcOpt matches 14 if score UHCJoining uhcEnabled matches 1 run team join lapis
+execute if score @s uhcOpt matches 15 if score UHCJoining uhcEnabled matches 1 run team join chorus
+execute if score @s uhcOpt matches 16 if score UHCJoining uhcEnabled matches 1 run team join bedrock
+execute if score @s uhcOpt matches 1..2 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"selector":"@s","color":"aqua"},{"text":" changed team manually","color":"reset"}]
+execute if score @s uhcOpt matches 3..16 if score UHCJoining uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"selector":"@s","color":"aqua"},{"text":" changed team manually","color":"reset"}]
 
 # >>>> Adjust number of teams (min=1, max=14)
 # 17 - Reduce number of teams (or cycle to max)
@@ -37,6 +38,8 @@ execute if score @s[tag=admin] uhcOpt matches 17..18 run tellraw @a [{"text":"UH
 # 19 - Randomize teams
 execute if score @s[tag=admin] uhcOpt matches 19 run team leave @a[team=!spectate]
 execute if score @s[tag=admin] uhcOpt matches 19 run function uhc_pack:lobby/randomize_teams
+execute if score @s[tag=admin] uhcOpt matches 19 run scoreboard players set UHCJoining uhcEnabled 0
+execute if score @s[tag=admin] uhcOpt matches 19 run data modify storage uhc_pack:text Icon.Joining set from storage uhc_pack:text Icon.Disabled
 execute if score @s[tag=admin] uhcOpt matches 19 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Randomized teams","color":"reset"}]
 
 # >>>> Adjust world size (min=496, max=3056)
@@ -168,10 +171,19 @@ execute if score UHCPhantom uhcEnabled matches 0 run data modify storage uhc_pac
 execute if score @s[tag=admin] uhcOpt matches 112 if score UHCPhantom uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Phantom spawning","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 112 if score UHCPhantom uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Phantom spawning","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
+# 113 - Toggle Team joining
+execute if score @s[tag=admin] uhcOpt matches 113 run execute store success score UHCJoining uhcEnabled run execute if score UHCJoining uhcEnabled matches 0
+execute if score UHCJoining uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.Joining set from storage uhc_pack:text Icon.Enabled
+execute if score UHCJoining uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.Joining set from storage uhc_pack:text Icon.Disabled
+execute if score @s[tag=admin] uhcOpt matches 113 if score UHCJoining uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Team joining","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
+execute if score @s[tag=admin] uhcOpt matches 113 if score UHCJoining uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Team joining","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
+
 # Handle sound effects and permission errors
-execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry only ","color":"reset"},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action","color":"reset"}]
-execute if score @s[tag=!admin] uhcOpt matches ..16 at @s run playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1
-execute if entity @s[tag=admin] unless score @s uhcOpt matches 30 at @s run playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1
+execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry, only ","color":"reset"},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action","color":"reset"}]
+execute if score @s uhcOpt matches 3..16 if score UHCJoining uhcEnabled matches 0 run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Sorry, teams are now locked","color":"reset"}]
+execute if score @s uhcOpt matches ..2 at @s run playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1
+execute if score @s uhcOpt matches 3..16 at @s run playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1
+execute if entity @s[tag=admin] if score @s uhcOpt matches 17.. unless score @s uhcOpt matches 30 at @s run playsound minecraft:block.note_block.chime player @s ~ ~ ~ 1 1
 
 # Finally, reset the book for everyone so that the scores are updated
 execute as @a run function uhc_pack:lobby/reset_book
