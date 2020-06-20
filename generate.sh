@@ -21,25 +21,33 @@ function main() {
         destination="$(dirname "$destination")/$(basename "$destination")/uhc-pack.zip"
     fi
     if [ "${destination##*.}" != "zip" ]; then
-        raise_error "$destination is not a zip"
+        raise_error "$(display_path "$destination") is not a zip"
     fi
     if [ -f "$destination" ]; then
         if [ $overwrite -eq 1 ]; then
-            echo "Deleting $destination"
+            echo "Deleting $(display_path "$destination")"
             trash "$destination"
         else
-            raise_error "$destination already exists"
+            raise_error "$(display_path "$destination") already exists"
         fi
     fi
     generate_book
     zip -r "$destination" *
-    echo "Generated: $destination"
+    echo "Generated: $(display_path "$destination")"
 }
 
 function raise_error() {
     local msg="$1"
     echo "ERROR: $msg"
     exit 1
+}
+
+function display_path() {
+    local path="$1"
+    if [ "$path" != "${path#"$HOME"}" ]; then
+        path="~/${path#"$HOME/"}"
+    fi
+    echo "$path"
 }
 
 function generate_book() {
