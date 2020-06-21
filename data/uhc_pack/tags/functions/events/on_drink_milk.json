@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "uhc_pack:running/glowing/on_consume_milk",
+    "uhc_pack:running/night_vision/on_consume_milk"
+  ]
+}

@@ -5,6 +5,7 @@
     "uhc_pack:running/border_shrinking/check",
     "uhc_pack:running/eternal_day",
     "uhc_pack:running/glowing/check",
+    "uhc_pack:running/night_vision/check",
     "uhc_pack:running/passive_mob_ai"
   ]
 }

@@ -178,6 +178,13 @@ execute if score UHCJoining uhcEnabled matches 0 run data modify storage uhc_pac
 execute if score @s[tag=admin] uhcOpt matches 113 if score UHCJoining uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Team joining","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 113 if score UHCJoining uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Team joining","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
+# 114 - Toggle Night vision
+execute if score @s[tag=admin] uhcOpt matches 114 run execute store success score UHCNightVision uhcEnabled run execute if score UHCNightVision uhcEnabled matches 0
+execute if score UHCNightVision uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.NightVision set from storage uhc_pack:text Icon.Enabled
+execute if score UHCNightVision uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.NightVision set from storage uhc_pack:text Icon.Disabled
+execute if score @s[tag=admin] uhcOpt matches 114 if score UHCNightVision uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Night vision","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
+execute if score @s[tag=admin] uhcOpt matches 114 if score UHCNightVision uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Night vision","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
+
 # Handle sound effects and permission errors
 execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry, only ","color":"reset"},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action","color":"reset"}]
 execute if score @s uhcOpt matches 3..16 if score UHCJoining uhcEnabled matches 0 run tellraw @s [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Sorry, teams are now locked","color":"reset"}]

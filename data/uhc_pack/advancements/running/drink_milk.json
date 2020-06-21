@@ -11,6 +11,6 @@
     }
   },
   "rewards": {
-    "function": "uhc_pack:running/glowing/on_consume_milk"
+    "function": "uhc_pack:running/on_consume_milk"
   }
 }

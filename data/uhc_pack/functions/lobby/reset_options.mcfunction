@@ -17,6 +17,7 @@ scoreboard players set UHCStew uhcEnabled 1
 scoreboard players set UHCPassive uhcEnabled 1
 scoreboard players set UHCPhantom uhcEnabled 1
 scoreboard players set UHCJoining uhcEnabled 1
+scoreboard players set UHCNightVision uhcEnabled 0
 
 # Display options for toggles
 
@@ -29,3 +30,4 @@ data modify storage uhc_pack:text Icon.Stew set from storage uhc_pack:text Icon.
 data modify storage uhc_pack:text Icon.Passive set from storage uhc_pack:text Icon.Enabled
 data modify storage uhc_pack:text Icon.Phantom set from storage uhc_pack:text Icon.Enabled
 data modify storage uhc_pack:text Icon.Joining set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.NightVision set from storage uhc_pack:text Icon.Disabled
