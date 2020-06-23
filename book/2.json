@@ -25,6 +25,8 @@
     {"score":{"name":"UHC","objective":"uhcGlow"},"color":"gray"},
     {"text":"min ","color":"gray"},
     {"text":"+","color":"dark_green","hoverEvent":{"action":"show_text","value":"+10 minutes"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 105"}},
+    {"text":"\nDiamond chestplate ","color":"dark_gray"},
+    {"storage":"uhc_pack:text","nbt":"Icon.DiamondChestplate","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 115"}},
     {"text":"\nStrong potions ","color":"dark_gray"},
     {"storage":"uhc_pack:text","nbt":"Icon.Potion","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 109"}},
     {"text":"\nSuspicious stew ","color":"dark_gray"},
