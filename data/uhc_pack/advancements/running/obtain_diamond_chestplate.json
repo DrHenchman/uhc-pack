@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "wearing": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:diamond_chestplate"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "uhc_pack:running/diamond_chestplate/on_obtain"
+  }
+}

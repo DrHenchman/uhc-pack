@@ -9,3 +9,5 @@ execute as @a[gamemode=spectator,tag=!spectator,scores={uhcATime=1..}] run funct
 execute if score UHC uhcTick matches 1200 run scoreboard players add UHC uhcMin 1
 execute if score UHC uhcTick matches 1200.. run scoreboard players set UHC uhcTick 0
 execute if score UHC uhcTick matches 0 run function #uhc_pack:minute
+
+execute as @a[scores={uhcDiaChest=1..}] run function uhc_pack:running/diamond_chestplate/cleanup

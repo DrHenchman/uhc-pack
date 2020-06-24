@@ -11,6 +11,7 @@ scoreboard objectives add uhcEter dummy
 scoreboard objectives add uhcGlow dummy
 scoreboard objectives add uhcEnabled dummy
 scoreboard objectives add uhcPotion dummy
+scoreboard objectives add uhcDiaChest dummy
 
 # Lobby scoreboards
 scoreboard objectives add uhcOpt trigger
