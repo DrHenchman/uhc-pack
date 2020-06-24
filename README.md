@@ -1,3 +1,5 @@
+![CI](https://github.com/DrHenchman/uhc-pack/workflows/CI/badge.svg)
+
 # UHC Pack v0.16 for Minecraft 1.15+
 
 A datapack for Minecraft 1.15+ for running Ultra Hardcore (UHC) tournaments.
