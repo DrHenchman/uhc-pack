@@ -158,7 +158,7 @@ function wait_and_stop_server() {
     local retries=0
     echo "Waiting for server to load datapack"
     sleep 5
-    until fgrep -q 'Starting minecraft server version' "$TARGET_DIR/$version/logs/latest.log" || ! ps "$server_pid" || [ $retries -ge 60 ]; do
+    until grep -q 'Loaded [0-9]\+ advancements' "$TARGET_DIR/$version/logs/latest.log" || ! ps "$server_pid" || [ $retries -ge 60 ]; do
         echo "Waiting for server to load datapack"
         sleep 1
         retries=$((retries + 1))
@@ -167,7 +167,7 @@ function wait_and_stop_server() {
         echo "Killing PID = $server_pid"
         kill -9 "$server_pid"
     fi
-    if ! fgrep -q 'Starting minecraft server version' "$TARGET_DIR/$version/logs/latest.log"; then
+    if ! grep -q 'Loaded [0-9]\+ advancements' "$TARGET_DIR/$version/logs/latest.log"; then
         raise_error "Minecraft server failed to start"
     fi
     if ! fgrep -q 'uhc-pack.zip' "$TARGET_DIR/$version/logs/latest.log"; then
