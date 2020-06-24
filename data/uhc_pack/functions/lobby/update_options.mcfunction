@@ -185,7 +185,7 @@ execute if score UHCNightVision uhcEnabled matches 0 run data modify storage uhc
 execute if score @s[tag=admin] uhcOpt matches 114 if score UHCNightVision uhcEnabled matches 1 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Night vision","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 114 if score UHCNightVision uhcEnabled matches 0 run tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Options","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Night vision","color":"aqua"},{"text":" is ","color":"reset"},{"text":"Disabled","color":"red"}]
 
-# 115 - Toggle Diamond chestlpates
+# 115 - Toggle Diamond chestplates
 execute if score @s[tag=admin] uhcOpt matches 115 run execute store success score UHCDiamondChestplate uhcEnabled run execute if score UHCDiamondChestplate uhcEnabled matches 0
 execute if score UHCDiamondChestplate uhcEnabled matches 1 run data modify storage uhc_pack:text Icon.DiamondChestplate set from storage uhc_pack:text Icon.Enabled
 execute if score UHCDiamondChestplate uhcEnabled matches 0 run data modify storage uhc_pack:text Icon.DiamondChestplate set from storage uhc_pack:text Icon.Disabled
