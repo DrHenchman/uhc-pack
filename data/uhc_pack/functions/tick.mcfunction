@@ -3,7 +3,7 @@
 # 1 - Lobby
 # 2 - Pre-generation
 # 3 - Start sequence
-# 4 - UHC 
+# 4 - UHC
 # 5 - Awards
 
 execute if score UHC uhcState matches 1 run function uhc_pack:lobby/tick
