@@ -12,9 +12,9 @@ A datapack for Minecraft 1.15+ for running Ultra Hardcore (UHC) tournaments.
 4. Decide the center of your map and teleport to it e.g. `/tp @s 0 ~ 0`
 5. Run `/function uhc_pack:setup` to prepare the Lobby
 
-From here, you can control the rest of the setup the book provided.
+From here, you can control the rest of the setup from the book provided.
 
-After the UHC is complete you can run `/function uhc_pack:complete` to put
+After the UHC has concluded, you can run `/function uhc_pack:complete` to put
 everyone into spectator mode and lock in the awards. You can then reveal
 the awards using `/function uhc_pack:awards/reveal`.
 
