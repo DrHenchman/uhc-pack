@@ -1,3 +1,4 @@
+scoreboard objectives setdisplay sidebar
 
 execute if score UHC uhcTick matches 1 run title @a subtitle {"text":"Good luck!"}
 execute if score UHC uhcTick matches 1 run title @a title {"text":"UHC is starting!","color":"gold"}
