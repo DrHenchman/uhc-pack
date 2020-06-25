@@ -6,3 +6,5 @@ execute at @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1] as @a[tag=!pre
 # 5 seconds to accomodate for the start sequence
 effect give @a minecraft:weakness 5 255 true
 effect give @a minecraft:saturation 5 255 true
+
+function uhc_pack:lobby/update_sidebar

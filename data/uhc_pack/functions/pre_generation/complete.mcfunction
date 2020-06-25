@@ -1,5 +1,5 @@
 
-scoreboard objectives setdisplay sidebar
+scoreboard objectives setdisplay sidebar uhcLobby
 scoreboard players reset * uhcPG
 
 tp @a[tag=pre_generator] @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1]
