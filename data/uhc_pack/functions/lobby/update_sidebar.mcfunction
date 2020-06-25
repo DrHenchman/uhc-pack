@@ -1,1 +1,1 @@
-execute store result score Players uhcLobby run scoreboard players get Players uhcState
+execute store result score Players uhcLobby run execute if entity @a[team=!spectate]
