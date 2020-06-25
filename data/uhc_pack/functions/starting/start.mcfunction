@@ -17,6 +17,10 @@ execute if score UHC uhcBSize matches 3056 run worldborder set 3056
 gamemode survival @a[team=!spectate]
 execute as @a[team=spectate] run function uhc_pack:running/make_player_spectator
 
+# Add the 'playing' tag for all players who are participating in the UHC
+# This is important for the death function
+tag @a[team=!spectate] add playing
+
 # Spread the players based off the world size
 execute if score UHC uhcBSize matches 496 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 232 true @a[tag=playing]
 execute if score UHC uhcBSize matches 1008 at @e[type=minecraft:armor_stand,tag=lobbycenter] run spreadplayers ~ ~ 224 488 true @a[tag=playing]
