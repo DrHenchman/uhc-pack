@@ -29,9 +29,22 @@ the awards using `/function uhc_pack:awards/reveal`.
 * *Late game options* - Encourage teams to engage in PVP by triggering external day and glowing effects.
 * *Buffs and Nerfs* - Control the balance of your UHC using toggles for whether strong potions or suspicious stews are allowed.
 
+## Contributing
+
+UHC Pack is developed open source and is happy to accept contributions. All contributions are made under the same
+AGPL 3.0 license as UHC Pack uses. You are also welcome to raise bugs reports or enhancement requests if you have
+any.
+
+## Links
+
+* [Bugs & Feature requests](https://github.com/DrHenchman/uhc-pack/issues)
+* [Release notes](https://github.com/DrHenchman/uhc-pack/releases)
+* [Discord server](https://discord.gg/PFg4mbN)
+
 ## Credits
 
 * DrHenchman - Creator of the datapack
+* [Contributors](https://github.com/DrHenchman/uhc-pack/graphs/contributors)
 
 ## License
 
