@@ -88,6 +88,6 @@ execute if score @s uhcPotion matches 1 run give @s minecraft:lingering_potion{P
 execute if score @s uhcPotion matches 1 run tag @s add strong_potion
 
 playsound minecraft:entity.witch.drink player @s[tag=strong_potion] ~ ~ ~ 1 0.9
-tellraw @s[tag=strong_potion] [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Strong potions","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Disabled","color":"red"}]
+tellraw @s[tag=strong_potion] [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Strong potions","color":"gray"},{"text":" \u2503 "},{"text":"Disabled","color":"red"}]
 tag @s remove strong_potion
 

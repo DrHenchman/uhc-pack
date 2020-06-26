@@ -16,4 +16,4 @@ execute if entity @a[tag=playing,team=lapis] run scoreboard players add TeamsRem
 execute if entity @a[tag=playing,team=chorus] run scoreboard players add TeamsRemaining uhcState 1
 execute if entity @a[tag=playing,team=bedrock] run scoreboard players add TeamsRemaining uhcState 1
 
-execute if score TeamsRemaining uhcState matches 0..1 run tellraw @a[tag=admin] [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Victory detected","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"[Click to complete]","color":"green","clickEvent":{"action":"run_command","value":"/function uhc_pack:complete"}}]
+execute if score TeamsRemaining uhcState matches 0..1 run tellraw @a[tag=admin] [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Victory detected","color":"gray"},{"text":" \u2503 "},{"text":"[Click to complete]","color":"green","clickEvent":{"action":"run_command","value":"/function uhc_pack:complete"}}]

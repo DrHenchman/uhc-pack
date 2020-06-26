@@ -29,5 +29,5 @@ execute if score UHC uhcSBSize matches 496 if score UHC uhcSBDur matches 60 run 
 execute if score UHC uhcSBSize matches 496 if score UHC uhcSBDur matches 80 run worldborder set 496 4800
 execute if score UHC uhcSBSize matches 496 if score UHC uhcSBDur matches 100 run worldborder set 496 6000
 
-tellraw @a [{"text":"UHC","color":"light_purple"},{"text":" \u2503 ","color":"reset"},{"text":"Shrinking","color":"gray"},{"text":" \u2503 ","color":"reset"},{"text":"Activated","color":"gold"}]
+tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Shrinking","color":"gray"},{"text":" \u2503 "},{"text":"Activated","color":"gold"}]
 execute as @a at @s run playsound minecraft:entity.elder_guardian.curse player @s ~ ~ ~ 1 0
