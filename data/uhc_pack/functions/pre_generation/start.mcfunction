@@ -13,4 +13,4 @@ scoreboard objectives setdisplay sidebar uhcPG
 
 tag @s add pre_generator
 
-function uhc_pack:pre_generation/generate_dimension/next
+function uhc_pack:pre_generation/stage/next

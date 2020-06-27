@@ -5,5 +5,5 @@ execute if score GID uhcPGSet matches 1 run scoreboard players set Dimension uhc
 # Generate nether
 execute if score GID uhcPGSet matches 2 run scoreboard players set Dimension uhcPGSet -1
 
-execute if score GID uhcPGSet matches 1..2 run function uhc_pack:pre_generation/generate_dimension/do
+execute if score GID uhcPGSet matches 1..2 run function uhc_pack:pre_generation/stage/generate
 execute unless score GID uhcPGSet matches ..2 run function uhc_pack:pre_generation/complete

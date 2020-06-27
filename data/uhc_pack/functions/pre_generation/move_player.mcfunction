@@ -8,6 +8,6 @@ execute as @a[tag=pre_generator] unless score X uhcPG >= UHC uhcBSize run functi
 execute as @a[tag=pre_generator] if score X uhcPG >= UHC uhcBSize run function uhc_pack:pre_generation/move_player/z
 
 # Check exit condition
-execute if score Z uhcPG >= UHC uhcBSize run function uhc_pack:pre_generation/generate_dimension/complete
+execute if score Z uhcPG >= UHC uhcBSize run function uhc_pack:pre_generation/stage/complete
 # If the test fails, mark this step as done and continue
 execute unless score Z uhcPG >= UHC uhcBSize run scoreboard players add Done uhcPG 1
