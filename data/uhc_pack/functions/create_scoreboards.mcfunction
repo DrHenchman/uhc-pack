@@ -18,6 +18,9 @@ scoreboard objectives add uhcLobby dummy "Game Details"
 scoreboard objectives add uhcOpt trigger
 scoreboard objectives add uhcTeams dummy
 
+# Dynamic teleportation scoreboard
+scoreboard objectives add uhcDynTP dummy "Dynamic TP"
+
 # Pre-generation scoreboards
 scoreboard objectives add uhcPG dummy "Pre-generation"
 
