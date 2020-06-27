@@ -1,8 +1,16 @@
-
 scoreboard objectives setdisplay sidebar uhcLobby
-scoreboard players reset * uhcPG
 
-tp @a[tag=pre_generator] @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1]
+# Mark every pre-generator as target to be teleported
+tag @a[tag=pre_generator] add tp_subject
+# Set the coordinates to the center of the lobby
+scoreboard players operation X uhcDynTP = X uhcPGSet
+scoreboard players operation Y uhcDynTP = Y uhcPGSet
+scoreboard players operation Z uhcDynTP = Z uhcPGSet
+# Execute the teleport
+execute in minecraft:overworld positioned 0 0 0 run function uhc_pack:dynamic_tp/do
+
+scoreboard players reset * uhcPGSet
+
 tag @a[tag=pre_generator] remove pre_generator
 
 tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Pre-generation","color":"gray"},{"text":" \u2503 "},{"text":"Complete","color":"gold"}]

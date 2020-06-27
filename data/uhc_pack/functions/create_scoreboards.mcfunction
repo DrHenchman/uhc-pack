@@ -23,6 +23,7 @@ scoreboard objectives add uhcDynTP dummy "Dynamic TP"
 
 # Pre-generation scoreboards
 scoreboard objectives add uhcPG dummy "Pre-generation"
+scoreboard objectives add uhcPGSet dummy "Pre-generation settings"
 
 # UHC scoreboards
 scoreboard objectives add uhcMin dummy
