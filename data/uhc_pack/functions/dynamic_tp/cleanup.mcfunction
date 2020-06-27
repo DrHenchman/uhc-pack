@@ -1,8 +1,4 @@
-scoreboard players reset Axis uhcDynTP
-scoreboard players reset Coord uhcDynTP
-scoreboard players reset Check uhcDynTP
-scoreboard players reset CheckFactor uhcDynTP
-scoreboard players reset loadedDest uhcDynTP
-scoreboard players reset loadedSource uhcDynTP
+scoreboard players reset * uhcDynTP
 
 kill @e[tag=tp_target]
+tag @e[tag=tp_subject] remove tp_subject

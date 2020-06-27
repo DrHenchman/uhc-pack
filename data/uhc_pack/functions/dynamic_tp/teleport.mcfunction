@@ -11,3 +11,8 @@ execute as @s if score Z uhcDynTP matches ..-1 run function uhc_pack:dynamic_tp/
 
 execute as @s at @s store success score loadedDest uhcDynTP run forceload query ~ ~
 execute as @s at @s if score loadedDest uhcDynTP matches 0 run forceload add ~ ~
+
+# Teleport all subjects to the target
+tp @e[tag=tp_subject] @s
+# Clean up the forceload for the destination (if it wasn't loaded before)
+execute as @s at @s if score loadedDest uhcDynTP matches 0 run forceload remove ~ ~

@@ -7,12 +7,7 @@ execute store success score loadedSource uhcDynTP run forceload query ~ ~
 execute if score loadedSource uhcDynTP matches 0 run forceload add ~ ~
 summon minecraft:armor_stand ~ ~ ~ {Invisible:1b,Invulnerable:1b,Small:1b,NoGravity:1b,Tags:["tp_target"]}
 
-execute as @e[tag=tp_target] run function uhc_pack:dynamic_tp/teleport_target
-
-# Teleport all subjects to the target
-execute as @e[tag=tp_subject] run tp @s @e[tag=tp_target,limit=1]
-# Clean up the forceload for the destination (if it wasn't loaded before)
-execute if score loadedDest uhcDynTP matches 0 as @e[tag=tp_target] run forceload remove ~ ~
+execute as @e[tag=tp_target,limit=1] run function uhc_pack:dynamic_tp/teleport
 
 # Clean up the mess
 function uhc_pack:dynamic_tp/cleanup
