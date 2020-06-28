@@ -1,18 +1,34 @@
-# Teleport the target marker to the desired location one axis at a time
+# Teleport the target marker to the desired location
 # There is no need to load any other chunks, since @s selected entities stay in memory and do not have to be reselected
-execute as @s if score X uhcDynTP matches 1.. run function uhc_pack:dynamic_tp/positive/x
-execute as @s if score X uhcDynTP matches ..-1 run function uhc_pack:dynamic_tp/negative/x
 
-execute as @s if score Y uhcDynTP matches 1.. run function uhc_pack:dynamic_tp/positive/y
-execute as @s if score Y uhcDynTP matches ..-1 run function uhc_pack:dynamic_tp/negative/y
+# Set precision scale
+scoreboard players set Scale uhcDynTP 100
 
-execute as @s if score Z uhcDynTP matches 1.. run function uhc_pack:dynamic_tp/positive/z
-execute as @s if score Z uhcDynTP matches ..-1 run function uhc_pack:dynamic_tp/negative/z
+# Store target's position in storage
+data modify storage uhc_pack:dynamic_tp Pos set from entity @s Pos
 
-execute as @s at @s store success score loadedDest uhcDynTP run forceload query ~ ~
-execute as @s at @s if score loadedDest uhcDynTP matches 0 run forceload add ~ ~
+# Transfer these coordinates onto the scoreboard
+execute store result score XBase uhcDynTP run data get storage uhc_pack:dynamic_tp Pos[0] 100
+execute store result score YBase uhcDynTP run data get storage uhc_pack:dynamic_tp Pos[1] 100
+execute store result score ZBase uhcDynTP run data get storage uhc_pack:dynamic_tp Pos[2] 100
+
+# Make sure the relative coordinates have the same scale
+scoreboard players operation X uhcDynTP *= Scale uhcDynTP
+scoreboard players operation Y uhcDynTP *= Scale uhcDynTP
+scoreboard players operation Z uhcDynTP *= Scale uhcDynTP
+
+# Add the target's coordinates
+scoreboard players operation X uhcDynTP += XBase uhcDynTP
+scoreboard players operation Y uhcDynTP += YBase uhcDynTP
+scoreboard players operation Z uhcDynTP += ZBase uhcDynTP
+
+# Update storage with the new coordinates
+execute store result storage uhc_pack:dynamic_tp Pos[0] double 0.01 run scoreboard players get X uhcDynTP
+execute store result storage uhc_pack:dynamic_tp Pos[1] double 0.01 run scoreboard players get Y uhcDynTP
+execute store result storage uhc_pack:dynamic_tp Pos[2] double 0.01 run scoreboard players get Z uhcDynTP
+
+# Apply these coordinates to the target, effectively teleporting it
+data modify entity @s Pos set from storage uhc_pack:dynamic_tp Pos
 
 # Teleport all subjects to the target
 tp @e[tag=tp_subject] @s
-# Clean up the forceload for the destination (if it wasn't loaded before)
-execute as @s at @s if score loadedDest uhcDynTP matches 0 run forceload remove ~ ~
