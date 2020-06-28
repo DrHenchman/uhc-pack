@@ -11,4 +11,4 @@ scoreboard players reset ChunkSize uhcPG
 
 scoreboard players operation Total uhcPG *= Total uhcPG
 
-function uhc_pack:pre_generation/teleport/to_start
+function uhc_pack:pre_generation/stage/teleport/to_start
