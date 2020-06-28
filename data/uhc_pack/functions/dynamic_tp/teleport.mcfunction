@@ -31,4 +31,4 @@ execute store result storage uhc_pack:dynamic_tp Pos[2] double 0.01 run scoreboa
 data modify entity @s Pos set from storage uhc_pack:dynamic_tp Pos
 
 # Teleport all subjects to the target
-tp @e[tag=tp_subject] @s
+execute at @s run tp @e[tag=tp_subject] @s
