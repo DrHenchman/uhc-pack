@@ -1,4 +1,4 @@
-scoreboard players set GID uhcPGSet 0
+scoreboard players set Stage uhcPGSet 0
 
 # Cache lobby coordinates for use elsewhere
 execute store result score X uhcPGSet run data get entity @e[tag=lobbycenter,limit=1] Pos[0]
