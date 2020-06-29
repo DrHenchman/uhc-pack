@@ -1,3 +1,5 @@
+bossbar remove uhc_pack:pregen
+
 scoreboard players reset * uhcPG
 scoreboard players reset * uhcPGQueue
 

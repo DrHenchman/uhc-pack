@@ -11,3 +11,9 @@ scoreboard players operation Total uhcPG /= ChunkSize uhcPG
 scoreboard players reset ChunkSize uhcPG
 
 scoreboard players operation Total uhcPG *= Total uhcPG
+
+bossbar add uhc_pack:pregen {"text":"Generating...","color":"white"}
+bossbar set uhc_pack:pregen color green
+bossbar set uhc_pack:pregen players @a
+bossbar set uhc_pack:pregen style notched_10
+execute store result bossbar uhc_pack:pregen max run scoreboard players get Total uhcPG
