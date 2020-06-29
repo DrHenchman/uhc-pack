@@ -11,6 +11,6 @@ scoreboard players set UHC uhcTick 0
 scoreboard players set UHC uhcState 2
 scoreboard objectives setdisplay sidebar uhcPG
 
-tag @s add pre_generator
+summon minecraft:armor_stand ~ ~ ~ {Invincible:1b,Small:1b,Invisible:1b,NoGravity:1b,Tags:["pre_generator"]}
 
 function uhc_pack:pre_generation/stage/next

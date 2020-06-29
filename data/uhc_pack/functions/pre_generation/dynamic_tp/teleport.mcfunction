@@ -32,3 +32,4 @@ data modify entity @s Pos set from storage uhc_pack:dynamic_tp Pos
 
 # Teleport all subjects to the target
 tp @e[tag=tp_subject] @s
+execute at @s run forceload add ~ ~
