@@ -1,9 +1,9 @@
-# Move in the X direction if applicable
-execute as @s at @s run function uhc_pack:pre_generation/stage/step/x
-# Else, move on the z-axis and start a new line
-execute as @s at @s if score X uhcPG >= UHC uhcBSize run function uhc_pack:pre_generation/stage/step/z
+execute as @e[tag=pre_generator] run execute if score @s uhcPGQueue = LoadTime uhcPGSet run function uhc_pack:pre_generation/stage/step/chunk/unload
+execute as @e[tag=pre_generator] run execute if score @s uhcPGQueue < LoadTime uhcPGSet run scoreboard players add @s uhcPGQueue 1
+
+execute if score X uhcPG matches 0.. if score Z uhcPG matches 0.. run function uhc_pack:pre_generation/stage/step/teleport
+execute if score X uhcPG matches 0.. if score Z uhcPG matches 0.. run function uhc_pack:pre_generation/stage/step/pointer/update
 
 # Check exit condition
 # If the test fails, mark this step as done and continue
-execute as @s if score Z uhcPG >= UHC uhcBSize run function uhc_pack:pre_generation/stage/complete
-execute unless score Z uhcPG >= UHC uhcBSize run scoreboard players add Done uhcPG 1
+execute unless entity @e[tag=pre_generator] run function uhc_pack:pre_generation/stage/complete

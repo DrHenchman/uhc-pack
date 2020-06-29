@@ -11,5 +11,3 @@ scoreboard players operation Total uhcPG /= ChunkSize uhcPG
 scoreboard players reset ChunkSize uhcPG
 
 scoreboard players operation Total uhcPG *= Total uhcPG
-
-execute as @e[tag=pre_generator] run function uhc_pack:pre_generation/stage/teleport/to_start

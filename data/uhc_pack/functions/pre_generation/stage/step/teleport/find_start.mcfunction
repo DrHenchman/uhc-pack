@@ -1,6 +1,6 @@
 # Find the "middle" of the area to pre-generate.
 # This places scores for X, Y and Z in the uhcDynTP scoreboard.
-function uhc_pack:pre_generation/stage/teleport/find_middle
+function uhc_pack:pre_generation/stage/step/teleport/find_middle
 
 # Calculate the distance to the border.
 # Since the world border is square, this distance counts
