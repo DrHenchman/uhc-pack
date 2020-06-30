@@ -13,6 +13,7 @@ scoreboard players reset ChunkSize uhcPG
 scoreboard players operation Total uhcPG *= Total uhcPG
 
 execute store result bossbar uhc_pack:pregen max run scoreboard players get Total uhcPG
+bossbar set uhc_pack:pregen players @a
 bossbar set uhc_pack:pregen value 0
 bossbar set uhc_pack:pregen visible true
 
