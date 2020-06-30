@@ -43,6 +43,6 @@ jobs:
         # which include a `upload_url`. See this blog post for more
         # info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./target/uhc-pack.zip
-          asset_name: uhc-pack.zip
-          asset_content_type: application/zip
+        asset_path: ./target/uhc-pack.zip
+        asset_name: uhc-pack.zip
+        asset_content_type: application/zip
