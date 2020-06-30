@@ -1,8 +1,8 @@
 # Clone the lobby center's coordinates into the dynamic teleport scoreboard.
 # This allows for scoreboard operations to be executed without losing track of these original coordinates.
-execute store result score XLobby uhcDynTP run data get entity @e[tag=lobbycenter,limit=1] Pos[0]
-execute store result score YLobby uhcDynTP run data get entity @e[tag=lobbycenter,limit=1] Pos[1]
-execute store result score ZLobby uhcDynTP run data get entity @e[tag=lobbycenter,limit=1] Pos[2]
+execute store result score XLobby uhcDynTP run data get entity @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1] Pos[0]
+execute store result score YLobby uhcDynTP run data get entity @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1] Pos[1]
+execute store result score ZLobby uhcDynTP run data get entity @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1] Pos[2]
 
 scoreboard players operation X uhcDynTP = XLobby uhcDynTP
 scoreboard players operation Y uhcDynTP = YLobby uhcDynTP
