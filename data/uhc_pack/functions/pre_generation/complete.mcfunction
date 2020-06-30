@@ -1,6 +1,6 @@
 scoreboard objectives setdisplay sidebar uhcLobby
 
-scoreboard players reset * uhcPGSet
+scoreboard players reset * uhcPG
 
 execute in minecraft:the_nether run forceload remove all
 execute in minecraft:overworld run forceload remove all
