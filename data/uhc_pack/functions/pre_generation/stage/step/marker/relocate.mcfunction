@@ -10,4 +10,9 @@ execute store result storage uhc_pack:dynamic_tp Pos[2] double 1 run scoreboard 
 data modify entity @s Pos set from storage uhc_pack:dynamic_tp Pos
 
 tag @s remove new
-function uhc_pack:pre_generation/stage/step/chunk/load
+
+execute at @s store success score AlreadyLoaded uhcPG run forceload query ~ ~
+# Load the new chunk, unless it is already loaded.
+# Leave it alone in that case!
+execute if score AlreadyLoaded uhcPG matches 0 run function uhc_pack:pre_generation/stage/step/chunk/load
+execute unless score AlreadyLoaded uhcPG matches 0 run function uhc_pack:pre_generation/stage/step/marker/done

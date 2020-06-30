@@ -15,3 +15,5 @@ scoreboard players operation Total uhcPG *= Total uhcPG
 execute store result bossbar uhc_pack:pregen max run scoreboard players get Total uhcPG
 bossbar set uhc_pack:pregen value 0
 bossbar set uhc_pack:pregen visible true
+
+execute positioned as @e[tag=lobbycenter,limit=1] run function uhc_pack:pre_generation/stage/step/marker/origin/load
