@@ -17,4 +17,4 @@ bossbar set uhc_pack:pregen players @a
 bossbar set uhc_pack:pregen value 0
 bossbar set uhc_pack:pregen visible true
 
-execute positioned as @e[tag=lobbycenter,limit=1] run function uhc_pack:pre_generation/stage/step/marker/origin/load
+execute positioned as @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1] run function uhc_pack:pre_generation/stage/step/marker/origin/load
