@@ -9,5 +9,5 @@ execute if score Stage uhcPG matches 2 run scoreboard players set Dimension uhcP
 execute if score Stage uhcPG matches 2 run scoreboard players set LoadTime uhcPG 300
 execute if score Stage uhcPG matches 2 run bossbar set uhc_pack:pregen name {"text":"Generating the Nether...","color":"white"}
 
-execute if score Stage uhcPG matches ..2 run function uhc_pack:pre_generation/stage/generate
+execute if score Stage uhcPG matches ..2 run function uhc_pack:pre_generation/stage/start
 execute unless score Stage uhcPG matches ..2 run function uhc_pack:pre_generation/complete

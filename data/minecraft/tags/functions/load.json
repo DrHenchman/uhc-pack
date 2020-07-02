@@ -3,6 +3,7 @@
   "values": [
     "uhc_pack:create_scoreboards",
     "uhc_pack:create_teams",
+    "uhc_pack:create_bossbars",
     "uhc_pack:create_storage"
   ]
 }
