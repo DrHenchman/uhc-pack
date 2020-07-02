@@ -23,6 +23,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Build Artifact
+      run: bin/ci.sh --clean
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
