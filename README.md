@@ -1,8 +1,13 @@
 ![CI](https://github.com/DrHenchman/uhc-pack/workflows/CI/badge.svg)
 
-# UHC Pack v0.18 for Minecraft 1.15+
+# UHC Pack v0.18 for Minecraft Java Edition
 
-A datapack for Minecraft 1.15+ for running Ultra Hardcore (UHC) tournaments.
+A datapack for Minecraft Java Edition for running Ultra Hardcore (UHC) tournaments.
+
+Currently supported Minecraft version:
+
+* 1.15.x
+* 1.16.x
 
 ## How to setup
 
@@ -48,7 +53,7 @@ any.
 
 ## License
 
-UHC Pack - Ultra Hardcore for Minecraft 1.15+
+UHC Pack - Ultra Hardcore for Minecraft Java Edition
 Copyright (C) 2020  DrHenchman
 
 This program is free software: you can redistribute it and/or modify
