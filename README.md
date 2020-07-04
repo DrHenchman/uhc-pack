@@ -4,10 +4,20 @@
 
 A datapack for Minecraft Java Edition for running Ultra Hardcore (UHC) tournaments.
 
-Currently supported Minecraft version:
+## Supported Minecraft versions
+
+Currently supported Minecraft versions:
 
 * 1.15.x
 * 1.16.x
+
+Earlier versions are not compatible due to the use of new command in the datapack.
+
+The datapack has also officially supported on the following server variants:
+
+* Vanilla
+* Spigot
+* Paper
 
 ## How to setup
 
