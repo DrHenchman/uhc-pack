@@ -38,5 +38,7 @@
     {"text":"\nTeam joining ","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, players are not\nable to switch teams by themselves"}},
     {"storage":"uhc_pack:text","nbt":"Icon.Joining","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 113"}},
     {"text":"\nNight vision ","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When enabled, this gives permanent\nnight vision to all players"}},
-    {"storage":"uhc_pack:text","nbt":"Icon.NightVision","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 114"}}
+    {"storage":"uhc_pack:text","nbt":"Icon.NightVision","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 114"}},
+    {"text":"\nFriendly Fire ","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, players are not\nable to damage their teammates"}},
+    {"storage":"uhc_pack:text","nbt":"Icon.FriendlyFire","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 116"}}
 ]
