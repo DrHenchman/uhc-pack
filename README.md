@@ -48,7 +48,7 @@ the awards using `/function uhc_pack:awards/reveal`.
 
 UHC Pack is developed open source and is happy to accept contributions. All contributions are made under the same
 AGPL 3.0 license as UHC Pack uses. You are also welcome to raise bugs reports or enhancement requests if you have
-any.
+any. For more information on contributing, refer to the guide in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Links
 
