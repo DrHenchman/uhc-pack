@@ -26,7 +26,7 @@ function main() {
     if [ -f "$destination" ]; then
         if [ $overwrite -eq 1 ]; then
             echo "Deleting $(display_path "$destination")"
-            trash "$destination"
+            delete_file "$destination"
         else
             raise_error "$(display_path "$destination") already exists"
         fi
@@ -66,6 +66,15 @@ function generate_book() {
     echo '' >> "$output_file"
     echo 'scoreboard players reset @s uhcOpt' >> "$output_file"
     echo 'scoreboard players enable @s uhcOpt' >> "$output_file"
+}
+
+function delete_file() {
+    local filename="$1"
+    if which trash; then
+        trash "$1"
+    else
+        rm "$1"
+    fi
 }
 
 main "$@"
