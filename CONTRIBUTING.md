@@ -85,6 +85,57 @@ change this default behaviour, you can use the `--overwrite` flag
 Note, as of writing, this command currently assumes that you are using MacOS
 and the `trash` command line utility tool
 
+## Coding standard
+
+Where possible, coding standards will be enforced using linting. You can
+run the lints using:
+
+    bin/lint.sh
+
+JSON files should be formatted using 2 space indentation and matching the
+formatting that the `jq` command pretty-prints.
+
+Functions should include a documentation header at the top of the file
+to describe what it does as well as the requirements.
+
+The bare minimum header looks like this
+
+    #
+    # Adds an awesome tag to all players
+    #
+
+    tag @a add awesome
+
+If the function requires a context entity, you must document what that entity
+should be using the `Entity:` attribute in the header
+
+    #
+    # Remove the awesome tag to the specified player
+    #
+    # Entity: the player
+    #
+
+    tag @s remove awesome
+If the function requires it is executed relative to a particular position, you
+must document what that location should be using the `Location:` attribute
+
+    #
+    # Summon an armor_stand at the current location
+    #
+    # Location: Where to summon the armor stand
+    #
+
+    summon minecraft:armor_stand ~ ~ ~
+
+If the function is invoked from a function tag, document which function tag
+it is registered with using the `Tag:` attribute
+
+    #
+    # Setup the scoreboards
+    #
+    # Tag: #minecraft:load
+    #
+
 ## Continuous Integration
 
 A CI build is currently run for the `master` branch and all pull requests. This
