@@ -40,8 +40,8 @@ You will need to use a Unix compatible system such as:
 You will also need the following command line tools:
 
 * `jq` - https://stedolan.github.io/jq/
-* `trash` - https://hasseg.org/trash/
 * `java` - https://adoptopenjdk.net/
+* `trash` - https://hasseg.org/trash/ (Optional)
 
 You should also have a working understanding about what a datapack is before
 contibuting. The Minecraft wiki is a fantastic source of information on the
@@ -81,9 +81,6 @@ This command will not overwrite an existing zip file if it existings. To
 change this default behaviour, you can use the `--overwrite` flag
 
     bin/generate.sh --overwrite path/to/minecraft/world/datapacks/uhc-pack.zip
-
-Note, as of writing, this command currently assumes that you are using MacOS
-and the `trash` command line utility tool
 
 ## Coding standard
 

@@ -26,7 +26,7 @@ function main() {
     if [ -f "$destination" ]; then
         if [ $overwrite -eq 1 ]; then
             echo "Deleting $(display_path "$destination")"
-            trash "$destination"
+            delete_file "$destination"
         else
             raise_error "$(display_path "$destination") already exists"
         fi
@@ -40,6 +40,15 @@ function raise_error() {
     local msg="$1"
     echo "ERROR: $msg"
     exit 1
+}
+
+function delete_file() {
+    local file_name="$1"
+    if type trash > /dev/null; then
+        trash "$file_name"
+    else
+        rm "$file_name"
+    fi
 }
 
 function display_path() {
