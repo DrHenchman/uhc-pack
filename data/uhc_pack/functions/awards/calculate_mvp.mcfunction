@@ -1,6 +1,8 @@
 #
 # Calculate and grant the MVP advancement
 #
+# Tag: #uhc_pack:events/on_complete
+#
 
 # Most kills is the first thing we check
 scoreboard players set UHC uhcPG 0

@@ -1,6 +1,8 @@
 #
 # Calculate and grant the mostly harmless advancement
 #
+# Tag: #uhc_pack:events/on_complete
+#
 
 scoreboard players set UHC uhcPG 100000
 execute as @a[team=!spectate] run scoreboard players operation UHC uhcPG < @s uhcDDealt

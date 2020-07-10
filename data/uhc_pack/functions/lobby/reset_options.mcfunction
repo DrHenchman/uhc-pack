@@ -1,6 +1,8 @@
 #
 # Reset all the options
 #
+# Tag: #uhc_pack:events/on_lobby
+#
 
 scoreboard players set UHC uhcTeams 4
 scoreboard players set UHC uhcMM 20

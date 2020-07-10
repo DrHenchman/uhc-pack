@@ -2,6 +2,7 @@
 # Regrant the night vision effect to the player
 #
 # Entity: The player who drank the milk
+# Tag: #uhc_pack:events/on_drink_milk
 #
 
 # Due to the way that the advancement trigger is invoked,
