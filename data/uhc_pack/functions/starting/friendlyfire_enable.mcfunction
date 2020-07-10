@@ -1,4 +1,7 @@
-#set friendlyfire for all teams
+#
+# set friendlyfire for all teams
+#
+
 team modify redstone friendlyFire true
 team modify gold friendlyFire true
 team modify slime friendlyFire true

@@ -1,5 +1,8 @@
+#
 # Teleport the target marker to the desired location
-# There is no need to load any other chunks, since @s selected entities stay in memory and do not have to be reselected
+#
+# Entity: The marker
+#
 
 # Calculate the desired destination based off of the base coordinates + the relative ones
 scoreboard players operation AbsoluteX uhcPG = BaseX uhcPG
@@ -13,6 +16,7 @@ execute store result storage uhc_pack:dynamic_tp Pos[1] double 1 run data get en
 execute store result storage uhc_pack:dynamic_tp Pos[2] double 1 run scoreboard players get AbsoluteZ uhcPG
 
 # Apply these coordinates to the target, effectively teleporting it
+# There is no need to load the target chunk ahead of time, since @s selected entities stay in memory and do not have to be reselected
 data modify entity @s Pos set from storage uhc_pack:dynamic_tp Pos
 
 tag @s remove new

@@ -1,4 +1,7 @@
-# Reset options
+#
+# Reset all the options
+#
+
 scoreboard players set UHC uhcTeams 4
 scoreboard players set UHC uhcMM 20
 scoreboard players set UHC uhcNextMM 0

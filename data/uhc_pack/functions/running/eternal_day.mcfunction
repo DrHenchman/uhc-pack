@@ -1,3 +1,8 @@
+#
+# Check whether eternal day should start this minute
+#
+# Tag: #uhc_pack:minute
+#
 
 execute if score UHCEter uhcEnabled matches 1 if score UHC uhcMin = UHC uhcEter run gamerule doDaylightCycle false
 execute if score UHCEter uhcEnabled matches 1 if score UHC uhcMin = UHC uhcEter run time set noon

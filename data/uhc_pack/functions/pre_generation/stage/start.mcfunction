@@ -1,3 +1,7 @@
+#
+# Start a pre-generation stage
+#
+
 # Zero out X and Z
 scoreboard players set X uhcPG 0
 scoreboard players set Z uhcPG 0

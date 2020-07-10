@@ -1,3 +1,7 @@
+#
+# Tick the pre-generation, tail recursing on next tick if the stages are not yet complete
+#
+
 execute as @e[type=minecraft:armor_stand,tag=pre_generator] run execute if score @s uhcPGQueue >= LoadTime uhcPG run function uhc_pack:pre_generation/step/complete
 execute as @e[type=minecraft:armor_stand,tag=pre_generator] run scoreboard players add @s uhcPGQueue 1
 

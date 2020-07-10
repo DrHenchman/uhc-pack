@@ -1,1 +1,7 @@
-execute unless entity @a[advancements={uhc_pack:awards/first_blood={triggered=true,kill_player=true}}] as @p[advancements={uhc_pack:awards/first_blood={kill_player=true}}] run advancement grant @s only uhc_pack:awards/first_blood triggered
+#
+# Check and grant the first blood advancement to the player if they are the
+# first one to kill another player. If multiple players have killed another
+# player in the same tick, choose one arbitrarily
+#
+
+execute unless entity @a[advancements={uhc_pack:awards/first_blood={triggered=true,kill_player=true}}] as @a[advancements={uhc_pack:awards/first_blood={kill_player=true}},limit=1] run advancement grant @s only uhc_pack:awards/first_blood triggered

@@ -1,3 +1,7 @@
+#
+# Add a batch of players into the active teams.
+# Tail recurse if there are still more players at the end
+#
 
 execute if score UHC uhcTeams matches 2.. run team join redstone @r[team=]
 execute if score UHC uhcTeams matches 2.. run team join gold @r[team=]

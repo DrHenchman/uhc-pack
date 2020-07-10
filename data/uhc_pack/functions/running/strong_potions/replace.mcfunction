@@ -1,3 +1,10 @@
+#
+# Replace the strong potion from the player's inventory
+#
+# Entity: The player
+# Location: The location of the player
+#
+
 tag @s remove strong_potion
 
 # Regular potions

@@ -1,3 +1,7 @@
+#
+# Check the playing players remaining and see if they are all on the same team
+#
+
 # Special case. Each player without a team are treated as separate teams
 execute store result score TeamsRemaining uhcState run execute if entity @a[tag=playing,team=]
 

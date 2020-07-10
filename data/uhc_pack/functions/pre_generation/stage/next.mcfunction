@@ -1,3 +1,7 @@
+#
+# Select the next state of the pre-generation
+#
+
 scoreboard players add Stage uhcPG 1
 
 # Generate overworld

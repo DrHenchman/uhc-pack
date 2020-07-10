@@ -27,7 +27,11 @@ function main() {
     fi
 
     ensure_target_dir
+
     generate_datapack
+
+    run_lint
+
     download_manifest
 
     echo "Resolving version $version"
@@ -72,6 +76,12 @@ function generate_datapack() {
         rm "$TARGET_DIR/uhc-pack.zip"
     fi
     bin/generate.sh "$TARGET_DIR/uhc-pack.zip"
+}
+
+function run_lint() {
+    if ! bin/lint.sh; then
+        raise_error "Lint failed"
+    fi
 }
 
 function download_manifest() {

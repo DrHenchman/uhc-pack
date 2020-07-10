@@ -59,6 +59,14 @@ function generate_book() {
     done
     local output_file="data/uhc_pack/functions/lobby/reset_book.mcfunction"
     echo -n '' > "$output_file"
+
+    echo '#' >> "$output_file"
+    echo '# Replace the current players first hotbar slot with the configuration book' >> "$output_file"
+    echo '# GENERATED FILE' >> "$output_file"
+    echo '#' >> "$output_file"
+    echo '# Entity: the player' >> "$output_file"
+    echo '#' >> "$output_file"
+    echo '' >> "$output_file"
     echo -n 'replaceitem entity @s hotbar.0 minecraft:written_book{title:"UHC Pack",author:"DrHenchman",display:{Lore:["by DrHenchman"]},HideFlags:32,pages:[' >> "$output_file"
     echo -n "$json_text" >> "$output_file"
     echo -n ']}' >> "$output_file"

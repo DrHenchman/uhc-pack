@@ -1,4 +1,6 @@
-scoreboard objectives setdisplay sidebar
+#
+# Step the starting sequence based on the tick
+#
 
 execute if score UHC uhcTick matches 1 run title @a subtitle {"text":"Good luck!"}
 execute if score UHC uhcTick matches 1 run title @a title {"text":"UHC is starting!","color":"gold"}

@@ -1,3 +1,7 @@
+#
+# Do all the things which are required to happen on every tick when in the lobby state
+#
+
 execute as @a[scores={uhcOpt=1..}] run function uhc_pack:lobby/update_options
 execute as @a[advancements={uhc_pack:lobby_book=false}] run advancement grant @s only uhc_pack:lobby_book
 # MC-129912 - You currently don't spawn in the lobby

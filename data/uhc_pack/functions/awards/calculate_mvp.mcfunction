@@ -1,3 +1,7 @@
+#
+# Calculate and grant the MVP advancement
+#
+
 # Most kills is the first thing we check
 scoreboard players set UHC uhcPG 0
 execute as @a[team=!spectate] run scoreboard players operation UHC uhcPG > @s uhcKills

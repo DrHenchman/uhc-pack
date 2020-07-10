@@ -1,4 +1,8 @@
-# Create teams
+#
+# Create all teams
+# 
+# Tag: #minecraft:load
+#
 
 team add spectate
 team modify spectate color black

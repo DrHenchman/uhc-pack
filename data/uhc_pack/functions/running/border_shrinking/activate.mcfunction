@@ -1,3 +1,7 @@
+#
+# Start the border shrinking for the desired duration
+#
+
 execute if score UHC uhcSBSize matches 16 if score UHC uhcSBDur matches 20 run worldborder set 16 1200
 execute if score UHC uhcSBSize matches 16 if score UHC uhcSBDur matches 40 run worldborder set 16 2400
 execute if score UHC uhcSBSize matches 16 if score UHC uhcSBDur matches 60 run worldborder set 16 3600

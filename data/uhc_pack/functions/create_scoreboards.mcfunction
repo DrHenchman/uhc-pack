@@ -1,3 +1,9 @@
+#
+# Create all scoreboards
+#
+# Tag: #minecraft:load
+#
+
 # Common scoreboards
 scoreboard objectives add uhcTick dummy
 scoreboard objectives add uhcState dummy

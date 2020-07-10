@@ -1,3 +1,7 @@
+#
+# Complete the pre-generation
+#
+
 scoreboard objectives setdisplay sidebar uhcLobby
 
 scoreboard players reset * uhcPG

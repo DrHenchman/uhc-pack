@@ -1,3 +1,10 @@
+#
+# Set up the UHC lobby in the current location
+#
+# Entity: A server operator
+# Location: The center of the UHC around
+#
+
 tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Setup","color":"gray"},{"text":" \u2503 Setting world spawn to current location"}]
 setworldspawn ~ 253 ~
 worldborder center ~ ~

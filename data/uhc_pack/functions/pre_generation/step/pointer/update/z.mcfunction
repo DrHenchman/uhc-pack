@@ -1,3 +1,7 @@
+#
+# Update the cursor's z coordinate for the pre-generation
+#
+
 scoreboard players add Z uhcPG 16
 
 scoreboard players set Invert uhcPG -1

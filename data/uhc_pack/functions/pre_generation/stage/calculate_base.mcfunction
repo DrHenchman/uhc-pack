@@ -1,3 +1,7 @@
+#
+# Calculate the base coordinates from which the cursor will be relative to
+#
+
 # Clone the lobby center's coordinates into the dynamic teleport scoreboard.
 # This allows for scoreboard operations to be executed without losing track of these original coordinates.
 execute store result score BaseX uhcPG run data get entity @e[type=minecraft:armor_stand,tag=lobbycenter,limit=1] Pos[0]

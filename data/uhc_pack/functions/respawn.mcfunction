@@ -1,3 +1,9 @@
+#
+# Utility to allow a player to be respawned in
+#
+# Entity: The player to respawn into the game
+#
+
 # Reset spectator state
 tag @s remove spectator
 effect clear @s

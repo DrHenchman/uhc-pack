@@ -1,3 +1,9 @@
+#
+# Mark the player who died as no longer player
+#
+# Entity: The player who died
+#
+
 # Remove playing tag so the player is put into spectator mode
 # and so that we don't run this function multiple times
 tag @s remove playing

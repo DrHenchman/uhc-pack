@@ -1,3 +1,9 @@
+#
+# Update the option triggered by the player
+#
+# Entity: the player updating the option
+#
+
 
 ########
 # Page 1

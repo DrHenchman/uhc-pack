@@ -1,3 +1,10 @@
+#
+# Do all the things required to start the UHC
+#
+
+# Ensure that no sidebar is visible
+scoreboard objectives setdisplay sidebar
+
 # Clear the players inventory and effects
 clear @a
 effect clear @a
