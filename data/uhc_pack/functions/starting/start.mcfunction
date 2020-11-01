@@ -49,7 +49,10 @@ kill @e[tag=lobby]
 difficulty hard
 # spectatorsGenerateChunks=false is current broken in Minecraft, making chunks not render
 gamerule spectatorsGenerateChunks true
-gamerule naturalRegeneration false
+# Paper fix: gamerules are per-dimension, so turn off natural regen in each dimension
+execute in minecraft:overworld run gamerule naturalRegeneration false
+execute in minecraft:the_nether run gamerule naturalRegeneration false
+execute in minecraft:the_end run gamerule naturalRegeneration false
 gamerule randomTickSpeed 3
 gamerule doFireTick true
 gamerule doDaylightCycle true
