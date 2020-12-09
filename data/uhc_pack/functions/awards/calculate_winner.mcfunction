@@ -1,3 +1,9 @@
+#
+# Calculate and grant the WINNER advancement
+#
+# Tag: #uhc_pack:events/on_complete
+#
+
 # Special case. As players without teams are solo, only give the advancement to the player
 # still playing
 execute if entity @a[tag=playing,team=] run advancement grant @a[tag=playing,team=] only uhc_pack:awards/winner triggered
