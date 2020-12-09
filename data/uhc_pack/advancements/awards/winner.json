@@ -1,0 +1,19 @@
+{
+  "parent": "uhc_pack:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:totem_of_undying"
+    },
+    "title": "WINNER!",
+    "description": "Congratulations on winning the UHC!",
+    "frame": "challenge"
+  },
+  "criteria": {
+    "triggered": {
+      "trigger": "minecraft:impossible"
+    },
+    "revealed": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}
