@@ -8,11 +8,12 @@ A datapack for Minecraft Java Edition for running Ultra Hardcore (UHC) tournamen
 
 Currently supported Minecraft versions:
 
-* 1.15.x
 * 1.16.x
+* 1.15.x
 
 Earlier versions are not compatible due to the use of new command in the datapack. More
-recent versions (including snapshots) may be compatible but are not actively tested.
+recent versions (including snapshots) may be compatible but are not actively supported
+until a stable release is available.
 
 The datapack has also officially supported on the following server variants:
 
@@ -44,6 +45,13 @@ the awards using `/function uhc_pack:awards/reveal`.
 * *Minute markers* - To help keep track of time, minute markers can be configured.
 * *Late game options* - Encourage teams to engage in PVP by triggering external day and glowing effects.
 * *Buffs and Nerfs* - Control the balance of your UHC using toggles for whether strong potions or suspicious stews are allowed.
+* *Extensible* - Event triggers are available to allow other datapacks to plugin to UHC to further customize the experience.
+
+### Configuration options
+
+![Configuration book page 1 or 3](images/book-page-1.png)
+![Configuration book page 2 or 3](images/book-page-2.png)
+![Configuration book page 3 or 3](images/book-page-3.png)
 
 ## Contributing
 
