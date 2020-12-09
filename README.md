@@ -24,7 +24,7 @@ The datapack has also officially supported on the following server variants:
 
 1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.21/uhc-pack.zip) of the datapack
 2. Place the zip file in in the `<world>/datapacks/` folder
-3. Run `/reload` on your server to detect the new datapack
+3. Run `/reload` (or `/minecraft:reload` on Spigot/Paper) on your server to detect the new datapack
 4. Decide the center of your map and teleport to it e.g. `/tp @s 0 ~ 0`
 5. Run `/function uhc_pack:setup` to prepare the Lobby
 
