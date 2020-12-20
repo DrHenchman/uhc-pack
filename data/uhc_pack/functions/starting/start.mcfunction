@@ -71,7 +71,10 @@ execute if score UHCFriendlyFire uhcEnabled matches 0 run function uhc_pack:star
 
 # Reset all the relevant scoreboards and set state to running
 scoreboard players reset @a uhcDeaths
-scoreboard players reset @a uhcDDealt
+# Instead of resetting the values, we set them to 0 to ensure
+# players with 0 damage dealt are taken into account for the
+# Mostly Harmless award
+scoreboard players set @a uhcDDealt 0
 scoreboard players reset @a uhcDTaken
 scoreboard players reset @a uhcKills
 scoreboard players set UHC uhcMin 0
