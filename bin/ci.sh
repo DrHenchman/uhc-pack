@@ -5,10 +5,15 @@ readonly TARGET_DIR="target"
 function main() {
     local clean_target_dir=0
     local version="release"
+    local variant="vanilla"
     while [ $# -ne 0 ]; do
         case "$1" in
             --version)
                 version="$2"
+                shift
+                ;;
+            --variant)
+                variant="$2"
                 shift
                 ;;
             --clean)
@@ -37,12 +42,12 @@ function main() {
     echo "Resolving version $version"
     version="$(resolve_version "$version")"
     echo "Resolved version $version"
-    download_version "$version"
+    download_version "$version" "$variant"
 
     accept_eula "$version"
     copy_datapack "$version"
-    start_server "$version"
-    wait_and_stop_server "$version"
+    start_server "$version" "$variant"
+    wait_and_stop_server "$version" "$variant"
 
     assert_no_error_logs "$version"
     echo "PASSED!"
@@ -110,6 +115,7 @@ function resolve_version() {
 
 function download_version() {
     local version="$1"
+    local variant="$2"
     if [ ! -d "$TARGET_DIR/$version" ]; then
         mkdir "$TARGET_DIR/$version"
     fi
@@ -126,16 +132,26 @@ function download_version() {
         curl "$version_url" > "$TARGET_DIR/$version/$version.json"
     fi
 
-    local version_jar_url="$(jq .downloads.server.url --raw-output "$TARGET_DIR/$version/$version.json")"
-    local version_jar_sha1="$(jq .downloads.server.sha1 --raw-output "$TARGET_DIR/$version/$version.json")"
-    if [ -f "$TARGET_DIR/$version/$version.jar" ]; then
-        echo "Already downloaded $version.jar"
-    else
-        echo "Downloading $version.jar"
-        curl "$version_jar_url" > "$TARGET_DIR/$version/$version.jar"
-    fi
-    echo "Running checksum on $version.jar"
-    echo "$version_jar_sha1  $TARGET_DIR/$version/$version.jar" | shasum -a 1 -c
+    case "$variant" in
+        vanilla)
+            local version_jar_url="$(jq .downloads.server.url --raw-output "$TARGET_DIR/$version/$version.json")"
+            local version_jar_sha1="$(jq .downloads.server.sha1 --raw-output "$TARGET_DIR/$version/$version.json")"
+            if [ -f "$TARGET_DIR/$version/$version.jar" ]; then
+                echo "Already downloaded $version.jar"
+            else
+                echo "Downloading $version.jar"
+                curl "$version_jar_url" > "$TARGET_DIR/$version/$version.jar"
+            fi
+            echo "Running checksum on $version.jar"
+            echo "$version_jar_sha1  $TARGET_DIR/$version/$version.jar" | shasum -a 1 -c
+            ;;
+        paper)
+            curl -L "https://papermc.io/api/v1/paper/$version/latest/download" > "$TARGET_DIR/$version/$version-paper.jar"
+            ;;
+        *)
+            raise_error "Unable to download JAR. Unsupported variant '$variant'"
+            ;;
+    esac
 }
 
 function accept_eula() {
@@ -154,9 +170,23 @@ function copy_datapack() {
 
 function start_server() {
     local version="$1"
+    local variant="$2"
+    local suffix=""
+
+    case "$variant" in
+        vanilla)
+            ;;
+        paper)
+            suffix="-paper"
+            ;;
+        *)
+            raise_error "Unable to start server. Unsupported variant '$variant'"
+            ;;
+    esac
+
     echo "Starting Minecraft version $version"
     cd "$TARGET_DIR/$version"
-    java -jar "$version.jar" nogui &
+    java -jar "$version$suffix.jar" nogui &
     echo $! > server.pid
     cd "../../"
     echo "PID = $(cat "$TARGET_DIR/$version/server.pid")"
@@ -164,11 +194,30 @@ function start_server() {
 
 function wait_and_stop_server() {
     local version="$1"
+    local variant="$2"
+
+    local search_term=""
+    case "$variant-$version" in
+        vanilla-*)
+            search_term='Loaded [0-9]\+ advancements'
+            ;;
+        paper-1.15*)
+            search_term='Loaded [0-9]\+ custom command functions'
+            ;;
+        paper-*)
+            search_term='Loading properties'
+            ;;
+        *)
+            raise_error "Unable to wait for datapack. Unsupported variant '$variant'"
+            ;;
+    esac
+
     local server_pid="$(cat "$TARGET_DIR/$version/server.pid")"
+
     local retries=0
     echo "Waiting for server to load datapack"
     sleep 5
-    until grep -q 'Loaded [0-9]\+ advancements' "$TARGET_DIR/$version/logs/latest.log" || ! ps "$server_pid" || [ $retries -ge 60 ]; do
+    until grep -q "$search_term" "$TARGET_DIR/$version/logs/latest.log" || ! ps "$server_pid" || [ $retries -ge 60 ]; do
         echo "Waiting for server to load datapack"
         sleep 1
         retries=$((retries + 1))
@@ -177,7 +226,7 @@ function wait_and_stop_server() {
         echo "Killing PID = $server_pid"
         kill -9 "$server_pid"
     fi
-    if ! grep -q 'Loaded [0-9]\+ advancements' "$TARGET_DIR/$version/logs/latest.log"; then
+    if ! grep -q "$search_term" "$TARGET_DIR/$version/logs/latest.log"; then
         raise_error "Minecraft server failed to start"
     fi
     if ! fgrep -q 'uhc-pack.zip' "$TARGET_DIR/$version/logs/latest.log"; then
