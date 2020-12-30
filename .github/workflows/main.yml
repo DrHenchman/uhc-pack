@@ -25,7 +25,11 @@ jobs:
       with:
         java-version: 1.8
     # Run against supported Minecraft versions
-    - name: Build and test (Minecraft version = latest release)
+    - name: Build and test (Minecraft version = latest release, variant = vanilla)
       run: bin/ci.sh --clean
-    - name: Build and test (Minecraft version = 1.15.2)
+    - name: Build and test (Minecraft version = latest release, variant = paper)
+      run: bin/ci.sh --clean --variant paper
+    - name: Build and test (Minecraft version = 1.15.2, variant = vanilla)
       run: bin/ci.sh --clean --version 1.15.2
+    - name: Build and test (Minecraft version = 1.15.2, variant = paper)
+      run: bin/ci.sh --clean --version 1.15.2 --variant paper
