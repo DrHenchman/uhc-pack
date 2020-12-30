@@ -20,6 +20,13 @@ execute if score UHC uhcBSize matches 1520 run worldborder set 1520
 execute if score UHC uhcBSize matches 2032 run worldborder set 2032
 execute if score UHC uhcBSize matches 2544 run worldborder set 2544
 execute if score UHC uhcBSize matches 3056 run worldborder set 3056
+# Fix for Spigot/Paper as world border is dimension specific. This is a noop on Vanilla
+execute if score UHC uhcBSize matches 496 in minecraft:the_nether run worldborder set 496
+execute if score UHC uhcBSize matches 1008 in minecraft:the_nether run worldborder set 1008
+execute if score UHC uhcBSize matches 1520 in minecraft:the_nether run worldborder set 1520
+execute if score UHC uhcBSize matches 2032 in minecraft:the_nether run worldborder set 2032
+execute if score UHC uhcBSize matches 2544 in minecraft:the_nether run worldborder set 2544
+execute if score UHC uhcBSize matches 3056 in minecraft:the_nether run worldborder set 3056
 
 gamemode survival @a[team=!spectate]
 execute as @a[team=spectate] run function uhc_pack:running/make_player_spectator
