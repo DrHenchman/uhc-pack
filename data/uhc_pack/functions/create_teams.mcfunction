@@ -49,3 +49,7 @@ team modify chorus color dark_purple
 
 team add bedrock "Bedrock"
 team modify bedrock color dark_gray
+
+# Paper fix. Empty teams are deleted by default and as a result will not have the correct friendly fire option
+execute if score UHC uhcState matches 4 if score UHCFriendlyFire uhcEnabled matches 1 run function uhc_pack:starting/friendlyfire_enable
+execute if score UHC uhcState matches 4 if score UHCFriendlyFire uhcEnabled matches 0 run function uhc_pack:starting/friendlyfire_disable
