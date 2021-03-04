@@ -8,6 +8,9 @@
     {"storage":"uhc_pack:text","nbt":"Icon.FriendlyFire","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 116"}},
     {"text":" Friendly Fire","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, players are not\nable to damage their teammates"}},
     {"text":"\n"},
+    {"storage":"uhc_pack:text","nbt":"Icon.ShowAdvancements","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 117"}},
+    {"text":" Show Advancements","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, advancements are not announced in chat"}},
+    {"text":"\n"},
     {"storage":"uhc_pack:text","nbt":"Icon.Passive","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 111"}},
     {"text":" Passive mob AI","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, passive mobs will not\nhave any AI.\nThis reduces load on the server.\n\nNote that this excludes tamable mobs,\nsuch as wolves and horses"}},
     {"text":""}

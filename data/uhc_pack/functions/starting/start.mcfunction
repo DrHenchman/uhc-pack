@@ -70,11 +70,12 @@ weather thunder 1
 execute if score UHCPhantom uhcEnabled matches 1 run gamerule doInsomnia true
 execute if score UHCPhantom uhcEnabled matches 0 run gamerule doInsomnia false
 
+execute if score UHCShowAdvs uhcEnabled matches 1 run gamerule announceAdvancements true
+execute if score UHCShowAdvs uhcEnabled matches 0 run gamerule announceAdvancements false
+
 # Set Friendly Fire
 execute if score UHCFriendlyFire uhcEnabled matches 1 run function uhc_pack:starting/friendlyfire_enable
 execute if score UHCFriendlyFire uhcEnabled matches 0 run function uhc_pack:starting/friendlyfire_disable
-
-
 
 # Reset all the relevant scoreboards and set state to running
 scoreboard players reset @a uhcDeaths
