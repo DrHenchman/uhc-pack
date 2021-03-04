@@ -26,6 +26,7 @@ scoreboard players set UHCJoining uhcEnabled 1
 scoreboard players set UHCNightVision uhcEnabled 0
 scoreboard players set UHCFriendlyFire uhcEnabled 1
 scoreboard players set UHCShowAdvs uhcEnabled 1
+scoreboard players set UHCConduit uhcEnabled 0
 
 # Display options for toggles
 
@@ -42,3 +43,4 @@ data modify storage uhc_pack:text Icon.Joining set from storage uhc_pack:text Ic
 data modify storage uhc_pack:text Icon.NightVision set from storage uhc_pack:text Icon.Disabled
 data modify storage uhc_pack:text Icon.FriendlyFire set from storage uhc_pack:text Icon.Enabled
 data modify storage uhc_pack:text Icon.ShowAdvancements set from storage uhc_pack:text Icon.Enabled
+data modify storage uhc_pack:text Icon.ConduitPower set from storage uhc_pack:text Icon.Disabled

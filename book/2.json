@@ -39,12 +39,15 @@
     {"text":" Strong potions","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, the use of tier 2 potions\nis prevented.\n\nAny of these potions in inventory will be\nconverted into their tier 1 equivalents"}},
     {"text":"\n"},
     {"storage":"uhc_pack:text","nbt":"Icon.Stew","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 110"}},
-    {"text":" Suspicious stew","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, the use of suspicious stews\nis prevented.\n\nAny suspicious stews in inventory will be\nconverted into mushroom stew"}},
+    {"text":" Suspicious stew","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, the use of suspicious stews is prevented.\n\nAny suspicious stews in inventory will be\nconverted into mushroom stew"}},
     {"text":"\n"},
     {"storage":"uhc_pack:text","nbt":"Icon.Phantom","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 112"}},
     {"text":" Phantom spawning","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, phantoms will\nnot be able to spawn naturally"}},
     {"text":"\n"},
     {"storage":"uhc_pack:text","nbt":"Icon.NightVision","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 114"}},
-    {"text":" Night vision","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When enabled, this gives permanent\nnight vision to all players"}},
+    {"text":" Night vision","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When enabled, this gives permanent\nnight vision to all players, allowing\nthem to see in caves without a light source"}},
+    {"text":"\n"},
+    {"storage":"uhc_pack:text","nbt":"Icon.ConduitPower","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 118"}},
+    {"text":" Conduit Power","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When enabled, this gives permanent\nconduit power to all players,\nallowing them to breath underwater"}},
     {"text":""}
 ]
