@@ -3,7 +3,7 @@
 # Tail recurse if there are still more players at the end
 #
 
-execute if score UHC uhcTeams matches 2.. run team join redstone @r[team=]
+execute if score UHC uhcTeams matches 1.. run team join redstone @r[team=]
 execute if score UHC uhcTeams matches 2.. run team join gold @r[team=]
 execute if score UHC uhcTeams matches 3.. run team join slime @r[team=]
 execute if score UHC uhcTeams matches 4.. run team join diamond @r[team=]
