@@ -58,10 +58,10 @@ execute if score UHC uhcBSize matches ..495 run scoreboard players set UHC uhcBS
 execute if score @s[tag=admin] uhcOpt matches 20..21 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"World size ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcBSize"},"color":"gold"}]
 
 # >>>> Adjust border shrink start (min=0, max=100)
-# 22 - Reduce border shrink start by 20 (or cycle to max)
-# 23 - Increase border shrink start by 20 (or cycle to min)
-execute if score @s[tag=admin] uhcOpt matches 22 run scoreboard players remove UHC uhcSBStrt 20
-execute if score @s[tag=admin] uhcOpt matches 23 run scoreboard players add UHC uhcSBStrt 20
+# 22 - Reduce border shrink start by 10 (or cycle to max)
+# 23 - Increase border shrink start by 10 (or cycle to min)
+execute if score @s[tag=admin] uhcOpt matches 22 run scoreboard players remove UHC uhcSBStrt 10
+execute if score @s[tag=admin] uhcOpt matches 23 run scoreboard players add UHC uhcSBStrt 10
 execute if score UHC uhcSBStrt matches 101.. run scoreboard players set UHC uhcSBStrt 0
 execute if score UHC uhcSBStrt matches ..-1 run scoreboard players set UHC uhcSBStrt 100
 execute if score @s[tag=admin] uhcOpt matches 22..23 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Border shrink start ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcSBStrt"},"color":"gold"},{"text":" minutes"}]
@@ -75,13 +75,13 @@ execute if score UHC uhcSBSize matches 497.. run scoreboard players set UHC uhcS
 execute if score UHC uhcSBSize matches ..15 run scoreboard players set UHC uhcSBSize 496
 execute if score @s[tag=admin] uhcOpt matches 24..25 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Border shrink size ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcSBSize"},"color":"gold"}]
 
-# >>>> Adjust border shrink duration (min=20, max=100)
-# 26 - Reduce border shrink duration by 20 (or cycle to max)
-# 27 - Increase border shrink duration by 20 (or cycle to min)
-execute if score @s[tag=admin] uhcOpt matches 26 run scoreboard players remove UHC uhcSBDur 20
-execute if score @s[tag=admin] uhcOpt matches 27 run scoreboard players add UHC uhcSBDur 20
-execute if score UHC uhcSBDur matches 101.. run scoreboard players set UHC uhcSBDur 20
-execute if score UHC uhcSBDur matches ..19 run scoreboard players set UHC uhcSBDur 100
+# >>>> Adjust border shrink duration (min=10, max=100)
+# 26 - Reduce border shrink duration by 10 (or cycle to max)
+# 27 - Increase border shrink duration by 10 (or cycle to min)
+execute if score @s[tag=admin] uhcOpt matches 26 run scoreboard players remove UHC uhcSBDur 10
+execute if score @s[tag=admin] uhcOpt matches 27 run scoreboard players add UHC uhcSBDur 10
+execute if score UHC uhcSBDur matches 101.. run scoreboard players set UHC uhcSBDur 10
+execute if score UHC uhcSBDur matches ..9 run scoreboard players set UHC uhcSBDur 100
 execute if score @s[tag=admin] uhcOpt matches 26..27 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Border shrink duration ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcSBDur"},"color":"gold"},{"text":" minutes"}]
 
 # 28 - Pre-generate
