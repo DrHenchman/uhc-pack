@@ -32,13 +32,13 @@ execute if score @s uhcOpt matches 16 if score UHCJoining uhcEnabled matches 1 r
 execute if score @s uhcOpt matches 1..2 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"selector":"@s","color":"aqua"},{"text":" changed team manually"}]
 execute if score @s uhcOpt matches 3..16 if score UHCJoining uhcEnabled matches 1 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"selector":"@s","color":"aqua"},{"text":" changed team manually"}]
 
-# >>>> Adjust number of teams (min=1, max=14)
+# >>>> Adjust number of teams (min=2, max=14)
 # 17 - Reduce number of teams (or cycle to max)
 # 18 - Increase number of teams (or cycle to min)
 execute if score @s[tag=admin] uhcOpt matches 17 run scoreboard players remove UHC uhcTeams 1
 execute if score @s[tag=admin] uhcOpt matches 18 run scoreboard players add UHC uhcTeams 1
-execute if score UHC uhcTeams matches 15.. run scoreboard players set UHC uhcTeams 1
-execute if score UHC uhcTeams matches ..0 run scoreboard players set UHC uhcTeams 14
+execute if score UHC uhcTeams matches 15.. run scoreboard players set UHC uhcTeams 2
+execute if score UHC uhcTeams matches ..1 run scoreboard players set UHC uhcTeams 14
 execute if score @s[tag=admin] uhcOpt matches 17..18 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Teams ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcTeams"},"color":"gold"}]
 
 # 19 - Randomize teams
