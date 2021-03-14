@@ -23,7 +23,7 @@ The datapack has also officially supported on the following server variants:
 
 ## How to setup
 
-1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.25/uhc-pack.zip) of the datapack
+1. Download the zip file for the [latest release](https://github.com/DrHenchman/uhc-pack/releases/download/v0.26/uhc-pack.zip) of the datapack
 2. Place the zip file in in the `<world>/datapacks/` folder
 3. Run `/reload` (or `/minecraft:reload` on Spigot/Paper) on your server to detect the new datapack
 4. Decide the center of your map and teleport to it e.g. `/tp @s 0 ~ 0`
