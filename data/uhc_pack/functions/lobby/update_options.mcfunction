@@ -119,13 +119,13 @@ execute if score UHC uhcEter matches 101.. run scoreboard players set UHC uhcEte
 execute if score UHC uhcEter matches ..-1 run scoreboard players set UHC uhcEter 100
 execute if score @s[tag=admin] uhcOpt matches 102..103 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Eternal day start ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcEter"},"color":"gold"},{"text":" minutes"}]
 
-# >>>> Adjust Glowing start (min=0, max=100)
+# >>>> Adjust Glowing start (min=0, max=200)
 # 104 - Reduce glowing start by 10 (or cycle to max)
 # 105 - Increase glowing start by 10 (or cycle to min)
 execute if score @s[tag=admin] uhcOpt matches 104 run scoreboard players remove UHC uhcGlow 10
 execute if score @s[tag=admin] uhcOpt matches 105 run scoreboard players add UHC uhcGlow 10
-execute if score UHC uhcGlow matches 101.. run scoreboard players set UHC uhcGlow 0
-execute if score UHC uhcGlow matches ..-1 run scoreboard players set UHC uhcGlow 100
+execute if score UHC uhcGlow matches 201.. run scoreboard players set UHC uhcGlow 0
+execute if score UHC uhcGlow matches ..-1 run scoreboard players set UHC uhcGlow 200
 execute if score @s[tag=admin] uhcOpt matches 104..105 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Glowing start ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcGlow"},"color":"gold"},{"text":" minutes"}]
 
 # 106 - Toggle Eternal day
