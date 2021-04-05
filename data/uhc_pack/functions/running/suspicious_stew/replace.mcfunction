@@ -9,7 +9,7 @@ tag @s remove suspicious_stew
 
 # There is a race condition between the player acquiring the suspicious stew
 # and the invocation of this function. As a result, we need to double check
-# The player indeed as suspicious stew
+# The player indeed has suspicious stew
 execute store success score @s uhcPotion run clear @s minecraft:suspicious_stew 1
 execute if score @s uhcPotion matches 1 run give @s minecraft:mushroom_stew
 execute if score @s uhcPotion matches 1 run tag @s add suspicious_stew
