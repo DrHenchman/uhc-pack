@@ -219,6 +219,15 @@ execute if score UHCConduit uhcEnabled matches 0 run data modify storage uhc_pac
 execute if score @s[tag=admin] uhcOpt matches 118 if score UHCConduit uhcEnabled matches 1 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Conduit Power","color":"aqua"},{"text":" is "},{"text":"Enabled","color":"dark_green"}]
 execute if score @s[tag=admin] uhcOpt matches 118 if score UHCConduit uhcEnabled matches 0 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Conduit Power","color":"aqua"},{"text":" is "},{"text":"Disabled","color":"red"}]
 
+# >>>> Adjust starting health (min=10, max=30)
+# 120 - Reduce starting hearts by 2 (or cycle to max)
+# 121 - Increase starting hearts by 2 (or cycle to min)
+execute if score @s[tag=admin] uhcOpt matches 120 run scoreboard players remove UHC uhcHealth 2
+execute if score @s[tag=admin] uhcOpt matches 121 run scoreboard players add UHC uhcHealth 2
+execute if score UHC uhcHealth matches 31.. run scoreboard players set UHC uhcHealth 10
+execute if score UHC uhcHealth matches ..9 run scoreboard players set UHC uhcHealth 30
+execute if score @s[tag=admin] uhcOpt matches 120..121 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Health start ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcHealth"},"color":"gold"},{"text":" hearts"}]
+
 # Handle sound effects and permission errors
 execute if score @s[tag=!admin] uhcOpt matches 17.. run tellraw @s [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 Sorry, only "},{"text":"UHC Admins","color":"gold"},{"text":" can perform that action"}]
 execute if score @s uhcOpt matches 3..16 if score UHCJoining uhcEnabled matches 0 run tellraw @s [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Sorry, teams are now locked"}]

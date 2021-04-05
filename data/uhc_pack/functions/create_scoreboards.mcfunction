@@ -18,6 +18,7 @@ scoreboard objectives add uhcGlow dummy
 scoreboard objectives add uhcEnabled dummy
 scoreboard objectives add uhcPotion dummy
 scoreboard objectives add uhcDiaChest dummy
+scoreboard objectives add uhcHealth dummy
 scoreboard objectives add uhcLobby dummy "Game Details"
 
 # Lobby scoreboards

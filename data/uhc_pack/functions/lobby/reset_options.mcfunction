@@ -27,6 +27,7 @@ scoreboard players set UHCNightVision uhcEnabled 0
 scoreboard players set UHCFriendlyFire uhcEnabled 1
 scoreboard players set UHCShowAdvs uhcEnabled 1
 scoreboard players set UHCConduit uhcEnabled 0
+scoreboard players set UHC uhcHealth 10
 
 # Display options for toggles
 
