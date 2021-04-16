@@ -78,7 +78,7 @@ execute if score UHCFriendlyFire uhcEnabled matches 1 run function uhc_pack:star
 execute if score UHCFriendlyFire uhcEnabled matches 0 run function uhc_pack:starting/friendlyfire_disable
 
 # Set starting health
-execute run function uhc_pack:starting/starting_health
+function uhc_pack:starting/starting_health
 
 # Reset all the relevant scoreboards and set state to running
 scoreboard players reset @a uhcDeaths

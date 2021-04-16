@@ -18,7 +18,7 @@
     {"text":" \u2503 "},
     {"text":"-","color":"red","hoverEvent":{"action":"show_text","value":"-2 hearts"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 120"}},
     {"text":" "},
-    {"score":{"name":"UHC","objective":"uhcHealth"},"color":"gray"},
+    {"score":{"name":"UHC","objective":"uhcStHealth"},"color":"gray"},
     {"text":" hearts","color":"gray"},
     {"text":" +","color":"dark_green","hoverEvent":{"action":"show_text","value":"+2 hearts"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 121"}}
     

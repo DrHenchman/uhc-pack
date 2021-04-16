@@ -222,10 +222,10 @@ execute if score @s[tag=admin] uhcOpt matches 118 if score UHCConduit uhcEnabled
 # >>>> Adjust starting health (min=10, max=30)
 # 120 - Reduce starting hearts by 2 (or cycle to max)
 # 121 - Increase starting hearts by 2 (or cycle to min)
-execute if score @s[tag=admin] uhcOpt matches 120 run scoreboard players remove UHC uhcHealth 2
-execute if score @s[tag=admin] uhcOpt matches 121 run scoreboard players add UHC uhcHealth 2
-execute if score UHC uhcHealth matches 31.. run scoreboard players set UHC uhcHealth 10
-execute if score UHC uhcHealth matches ..9 run scoreboard players set UHC uhcHealth 30
+execute if score @s[tag=admin] uhcOpt matches 120 run scoreboard players remove UHC uhcStHealth 2
+execute if score @s[tag=admin] uhcOpt matches 121 run scoreboard players add UHC uhcStHealth 2
+execute if score UHC uhcStHealth matches 31.. run scoreboard players set UHC uhcStHealth 10
+execute if score UHC uhcStHealth matches ..9 run scoreboard players set UHC uhcStHealth 30
 execute if score @s[tag=admin] uhcOpt matches 120..121 run tellraw @a [{"text":""},{"text":"UHC","color":"light_purple"},{"text":" \u2503 "},{"text":"Options","color":"gray"},{"text":" \u2503 "},{"text":"Health start ","color":"aqua"},{"text":"set to "},{"score":{"name":"UHC","objective":"uhcHealth"},"color":"gold"},{"text":" hearts"}]
 
 # Handle sound effects and permission errors
