@@ -76,7 +76,7 @@ function generate_book() {
     echo '# Entity: the player' >> "$output_file"
     echo '#' >> "$output_file"
     echo '' >> "$output_file"
-    echo -n 'replaceitem entity @s hotbar.0 minecraft:written_book{title:"UHC Pack",author:"DrHenchman",display:{Lore:["by DrHenchman"]},HideFlags:32,pages:[' >> "$output_file"
+    echo -n 'item entity @s hotbar.0 replace minecraft:written_book{title:"UHC Pack",author:"DrHenchman",display:{Lore:["by DrHenchman"]},HideFlags:32,pages:[' >> "$output_file"
     echo -n "$json_text" >> "$output_file"
     echo -n ']}' >> "$output_file"
     echo '' >> "$output_file"
