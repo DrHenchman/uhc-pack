@@ -30,6 +30,14 @@ The datapack has also officially supported on the following server variants:
 
 From here, you can control the rest of the setup from the book provided.
 
+By default, only the player who set up will be able to start the UHC or
+change settings. If you need to grant other players the ability to do this,
+you can by running `/tag <PlayerName> add admin`.
+
+Once a player has died they will be placed into spectator mode. If you wish
+to allow them to be respawned (for example, due to a death caused by server lag),
+you can by running `execute as <PlayerName> run function uhc_pack:respawn`.
+
 After the UHC has concluded, you can run `/function uhc_pack:complete` to put
 everyone into spectator mode and lock in the awards. You can then reveal
 the awards using `/function uhc_pack:awards/reveal`.
