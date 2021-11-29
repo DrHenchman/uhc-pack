@@ -146,7 +146,9 @@ function download_version() {
             echo "$version_jar_sha1  $TARGET_DIR/$version/$version.jar" | shasum -a 1 -c
             ;;
         paper)
-            curl -L "https://papermc.io/api/v1/paper/$version/latest/download" > "$TARGET_DIR/$version/$version-paper.jar"
+            local paper_build="$(curl "https://papermc.io/api/v2/projects/paper/versions/$version" | jq '.builds[-1]' --raw-output)"
+            local paper_build_download="$(curl "https://papermc.io/api/v2/projects/paper/versions/$version/builds/$paper_build" | jq '.downloads.application.name' --raw-output)"
+            curl -L "https://papermc.io/api/v2/projects/paper/versions/$version/builds/$paper_build/downloads/$paper_build_download" > "$TARGET_DIR/$version/$version-paper.jar"
             ;;
         *)
             raise_error "Unable to download JAR. Unsupported variant '$variant'"
