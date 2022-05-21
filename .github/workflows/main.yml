@@ -30,6 +30,7 @@ jobs:
     # Run against supported Minecraft versions
     - name: Build and test (Minecraft version = latest release, variant = vanilla)
       run: bin/ci.sh --clean
-    # Paper 1.18 tracking ticket https://github.com/PaperMC/Paper/issues/6136
     - name: Build and test (Minecraft version = latest release, variant = paper)
       run: bin/ci.sh --clean --variant paper
+    - name: Build and test (Minecraft version = 1.18.2, variant = vanilla)
+      run: bin/ci.sh --clean --version 1.18.2

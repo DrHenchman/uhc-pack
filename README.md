@@ -8,6 +8,7 @@ A datapack for Minecraft Java Edition for running Ultra Hardcore (UHC) tournamen
 
 Currently supported Minecraft versions:
 
+* 1.19.x
 * 1.18.x
 * 1.17.x
 
