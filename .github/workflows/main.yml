@@ -30,8 +30,7 @@ jobs:
     # Run against supported Minecraft versions
     - name: Build and test (Minecraft version = latest release, variant = vanilla)
       run: bin/ci.sh --clean
-    # Disabled until Paper supports 1.19: https://github.com/PaperMC/Paper/issues/7780
-    #- name: Build and test (Minecraft version = latest release, variant = paper)
-    #  run: bin/ci.sh --clean --variant paper
+    - name: Build and test (Minecraft version = latest release, variant = paper)
+      run: bin/ci.sh --clean --variant paper
     - name: Build and test (Minecraft version = 1.18.2, variant = vanilla)
       run: bin/ci.sh --clean --version 1.18.2
