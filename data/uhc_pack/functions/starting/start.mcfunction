@@ -77,6 +77,9 @@ execute if score UHCShowAdvs uhcEnabled matches 0 run gamerule announceAdvanceme
 execute if score UHCFriendlyFire uhcEnabled matches 1 run function uhc_pack:starting/friendlyfire_enable
 execute if score UHCFriendlyFire uhcEnabled matches 0 run function uhc_pack:starting/friendlyfire_disable
 
+# Set starting health
+function uhc_pack:starting/starting_health
+
 # Reset all the relevant scoreboards and set state to running
 scoreboard players reset @a uhcDeaths
 # Instead of resetting the values, we set them to 0 to ensure

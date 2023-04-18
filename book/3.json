@@ -13,5 +13,13 @@
     {"text":"\n"},
     {"storage":"uhc_pack:text","nbt":"Icon.Passive","interpret":true,"hoverEvent":{"action":"show_text","value":"Click to toggle between enabled and disabled"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 111"}},
     {"text":" Passive mob AI","color":"dark_gray","hoverEvent":{"action":"show_text","value":"When disabled, passive mobs will not\nhave any AI.\nThis reduces load on the server.\n\nNote that this excludes tamable mobs,\nsuch as wolves and horses"}},
-    {"text":""}
+    {"text":""},
+    {"text":"\n\nHealth","color":"dark_gray","hoverEvent":{"action":"show_text","value":"The amount of health everyone starts with."}},
+    {"text":" \u2503 "},
+    {"text":"-","color":"red","hoverEvent":{"action":"show_text","value":"-2 hearts"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 120"}},
+    {"text":" "},
+    {"score":{"name":"UHC","objective":"uhcStHealth"},"color":"gray"},
+    {"text":" hearts","color":"gray"},
+    {"text":" +","color":"dark_green","hoverEvent":{"action":"show_text","value":"+2 hearts"},"clickEvent":{"action":"run_command","value":"/trigger uhcOpt set 121"}}
+    
 ]
