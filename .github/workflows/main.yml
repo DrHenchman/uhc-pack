@@ -26,6 +26,7 @@ jobs:
     - name: Set up JDK 17
       uses: actions/setup-java@v3
       with:
+        distribution: microsoft
         java-version: 17
     # Run against supported Minecraft versions
     - name: Build and test (Minecraft version = latest release, variant = vanilla)
