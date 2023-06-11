@@ -244,8 +244,13 @@ function assert_no_error_logs() {
     local version="$1"
     echo "Analyzing Minecraft version $version logs"
     # fgrep exits with a non-zero code if there is no output, so we need to ignore errors
+    # Remove additional paper related logs which are not errors
     set +e
-    cat "$TARGET_DIR/$version/logs/latest.log" | fgrep -v '/WARN]' | fgrep -v '/INFO]' > "$TARGET_DIR/results.log"
+    cat "$TARGET_DIR/$version/logs/latest.log" \
+        | fgrep -v '/WARN]' | fgrep -v '/INFO]' \
+        | fgrep -v 'We recommend installing the spark profiler as a replacement: https://spark.lucko.me/' \
+        | fgrep -v 'For more information please visit: https://github.com/PaperMC/Paper/issues/8948' \
+        > "$TARGET_DIR/results.log"
     set -e
     echo "Error logs START"
     cat "$TARGET_DIR/results.log"
